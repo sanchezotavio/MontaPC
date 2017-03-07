@@ -1,0 +1,117 @@
+$font: 'Arial';
+$bg: #ffffff;
+$light: #ffffff;
+$main-color: #8460AA;
+
+body {
+  margin: 0;
+  position: relative;
+  background-color: $bg;
+  font-family: $font;
+}
+
+.header {
+  border-bottom: 3px solid $main-color;
+  padding: 5px 0;
+}
+
+.img {
+  width: 100%;
+}
+
+.title {
+  margin: 1em 0;
+  font-size: 16px;
+  font-family: $font;
+}
+
+.paragraph {
+  margin: 0;
+  font-size: 14px;
+  font-family: $font;
+}
+.clear{
+  &--space{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.button {
+  background-color: $main-color;
+  color: $light;
+  text-decoration: none;
+  font-size: .9em;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.link {
+  text-decoration: none;
+  color: $main-color;
+}
+
+.logo {
+  color: $main-color;
+  font-size: 18px;
+  font-weight: 400;
+
+  &__link {
+    @extend .link;
+  }
+}
+
+.align {
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-center {
+    text-align: center;
+  }
+}
+
+.search {
+  width: 100%;
+  padding: 20px 0;
+
+  &__input {
+    width: 88%;
+    padding: 1%;
+  }
+
+  &__button {
+    @extend .button;
+    width: 8%;
+    padding: 1%;
+  }
+}
+
+.movies {
+  width: 20%;
+  float: right;
+}
+
+.movie {
+  width: 100%;
+}
+
+.play__movie {
+  @extend .movie;
+  height: 500px;
+}
+
+.play {
+  width: 70%;
+  float: left;
+}
+
+.movie {
+  &__img {
+    @extend .img;
+  }
+}
