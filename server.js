@@ -36,6 +36,8 @@ app.use(express.static('public'))
 
 app.disable('x-powered-by')
 
+
+
 /* Configuration Mongoose */
 
 
@@ -60,7 +62,7 @@ app.use(flash())
 
 
 var configure = {
-    cwd: 'app',
+    cwd: process.cwd(),
     locale: 'en-us',
     logger: console,
     verbose: true,
