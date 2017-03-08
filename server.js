@@ -59,7 +59,7 @@ app.use(flash())
 
 
 
-var configure = {checkext: true, extlist: ['.js'], verbose: true, cwd: `${process.cwd()}\\app`}
+var configure = {checkext: true, extlist: ['.js'], verbose: true, cwd: `${process.cwd()}`}
 
 consign(configure)
   .include('models')
