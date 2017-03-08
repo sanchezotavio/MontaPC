@@ -64,7 +64,7 @@ app.use(flash())
 
 
 var configure = {
-    cwd: path.resolve(process.cwd()),
+    cwd: path.resolve('./app'),
     locale: 'en-us',
     logger: console,
     verbose: true,
