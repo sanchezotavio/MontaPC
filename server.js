@@ -20,6 +20,8 @@ var session = require('express-session')
 
 var stringSecurity = require('./config/stringSecurity')
 
+var path = require('path');
+
 /* Application */
 
 app.use(helmet())
@@ -62,7 +64,7 @@ app.use(flash())
 
 
 var configure = {
-    cwd: process.cwd(),
+    cwd: path.resolve(process.cwd()),
     locale: 'en-us',
     logger: console,
     verbose: true,
