@@ -1,6 +1,6 @@
 module.exports = (app, passport) => {
 
-  var accessController = app.controllers.access
+
  
   app.get('/logout', (req, res) => {
     req.logout()

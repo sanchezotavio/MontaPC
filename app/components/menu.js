@@ -4,10 +4,13 @@ import {Link} from 'react-router';
 class Menu extends Component {
     render() {
         return (
-            <nav className="menu">               
+            <nav className="menu">
                 <ul className="list">
                     <li className="item">
-                        <Link to="/user/home" className="item__link" activeClassName="item__link--active">
+                        <Link
+                            to="/user/home"
+                            className="item__link"
+                            activeClassName="item__link--active">
                             Minha Página
                         </Link>
                     </li>
@@ -22,9 +25,9 @@ class Menu extends Component {
                         </Link>
                     </li>
                     <li className="item">
-                        <Link to="/logout" className="item__link" activeClassName="item__link--active">
+                        <a href="/logout" className="item__link">
                             Sair
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </nav>
