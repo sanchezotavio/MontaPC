@@ -20,7 +20,7 @@ var session = require('express-session')
 
 var stringSecurity = require('./config/stringSecurity')
 
-var path = require('path');
+var path = require('path')
 
 /* Application */
 
@@ -60,16 +60,11 @@ app.use(flash())
 
 /* Consign */
 
-
-
-
 var configure = {
     cwd: path.resolve('./app'),
-    locale: 'en-us',
     logger: console,
     verbose: true,
-    extensions: [ '.js', '.json', '.node' ],
-    loggingType: 'info'
+    extensions: [ '.js', '.json', '.node' ]
   }
 
 consign(configure)
