@@ -11,7 +11,7 @@ class Header extends Component {
     render() {
         return (
             <header className="header">
-                <div className="grid">
+                <div className="grid--header">
                     <div className="col-1-2 clear--space">
                         <h1 className="logo">
                             <Link to="/" className="logo__link">
@@ -29,18 +29,14 @@ class Header extends Component {
                                 if (loading) {
                                     return <div>carregando...</div>;
                                 } else {
-                                    if (loading) {
-                                        return <div>carregando...</div>;
+                                    if (validateUser(JSON.stringify(result.body.success))) {
+                                        return <Menu name={result.body.name} image={result.body.imageUser} alt={result.body.name} />
                                     } else {
-                                        if (validateUser(JSON.stringify(result.body.success))) {
-                                            return <Menu/>
-                                        } else {
-                                            return <div>
-                                                <Link to="/login" className="button" activeClassName="button--active">
-                                                    Acessar Conta
-                                                </Link>
-                                            </div>
-                                        }
+                                        return <div>
+                                            <Link to="/login" className="button" activeClassName="button--active">
+                                                Acessar Conta
+                                            </Link>
+                                        </div>
                                     }
                                 }
                             }}

@@ -20,7 +20,7 @@ var session = require('express-session')
 
 var stringSecurity = require('./config/stringSecurity')
 
-var path = require('path')
+var path = require('path');
 
 /* Application */
 

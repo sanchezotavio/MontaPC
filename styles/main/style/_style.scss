@@ -2,6 +2,9 @@ $font: 'Arial';
 $bg: #ffffff;
 $light: #ffffff;
 $main-color: #8460AA;
+$bg-light: #e7ebf3;
+
+$border: 1px solid #EEF1F6;
 
 body {
   margin: 0;
@@ -13,6 +16,7 @@ body {
 .header {
   border-bottom: 3px solid $main-color;
   padding: 5px 0;
+  position: relative;
 }
 
 .img {
@@ -30,8 +34,9 @@ body {
   font-size: 14px;
   font-family: $font;
 }
-.clear{
-  &--space{
+
+.clear {
+  &--space {
     margin-top: 5px;
     margin-bottom: 5px;
   }
@@ -44,6 +49,7 @@ body {
   font-size: .9em;
   padding: 5px;
   border-radius: 5px;
+  border: 0;
 }
 
 .link {
@@ -89,6 +95,63 @@ body {
     width: 8%;
     padding: 1%;
   }
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 230px;
+  background-color: $light;
+  margin-top: 15px;
+  border: $border;
+  border-radius: 2px;
+  box-shadow: 0 4px 21px rgba(89, 105, 129, .3), 0 1px 2px rgba(0, 0, 0, .05), 0 0 0 1px rgba(89, 104, 128, .1);
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  list-style: none;
+  text-align: center;
+  border-bottom: $border;
+
+  &__link {
+    @extend .link;
+    font-size: .9em;
+    padding: 10px 0;
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__link:hover {
+    background-color: $bg-light;
+  }
+}
+
+.figure {
+  &--user {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: $border;
+    overflow: hidden;
+    background-color: $bg-light;
+  }
+}
+
+.toggle {
+  width: 30px;
+  height: 30px;
+  top: 0;
+  float: right;
+}
+
+.item::nth-last-child() {
+  border-bottom: 0;
 }
 
 .movies {

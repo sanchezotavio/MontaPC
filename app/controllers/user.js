@@ -27,7 +27,7 @@ module.exports = (app) => {
 
     validate: (req, res) => {
       if (req.user) {
-        res.json({success: true})
+        res.json({success: true, name: req.user.name, imageUser: req.user.imageUser})
       } else {
         res.json({success: false})
       }

@@ -5434,7 +5434,7 @@ class Access extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: 'container' },
+            { className: 'grid' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
                 { href: '/auth/facebook' },
@@ -5514,7 +5514,7 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             { className: 'header' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'grid' },
+                { className: 'grid--header' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'col-1-2 clear--space' },
@@ -5551,26 +5551,18 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                                     'carregando...'
                                 );
                             } else {
-                                if (loading) {
+                                if (validateUser(JSON.stringify(result.body.success))) {
+                                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_menu__["a" /* default */], { name: result.body.name, image: result.body.imageUser, alt: result.body.name });
+                                } else {
                                     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         'div',
                                         null,
-                                        'carregando...'
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
+                                            { to: '/login', className: 'button', activeClassName: 'button--active' },
+                                            'Acessar Conta'
+                                        )
                                     );
-                                } else {
-                                    if (validateUser(JSON.stringify(result.body.success))) {
-                                        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_menu__["a" /* default */], null);
-                                    } else {
-                                        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'div',
-                                            null,
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
-                                                { to: '/login', className: 'button', activeClassName: 'button--active' },
-                                                'Acessar Conta'
-                                            )
-                                        );
-                                    }
                                 }
                             }
                         }
@@ -5626,48 +5618,74 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'nav',
-            { className: 'menu' },
+            'div',
+            null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'ul',
-                { className: 'list' },
+                'figure',
+                { className: 'figure--user' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'li',
-                    { className: 'item' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
-                        {
-                            to: '/user/home',
-                            className: 'item__link',
-                            activeClassName: 'item__link--active' },
-                        'Minha P\xE1gina'
-                    )
-                ),
+                    __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
+                    { to: '/user/home', className: 'link', activeClassName: 'link--active' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
+                        className: 'img',
+                        src: this.props.image,
+                        title: this.props.name,
+                        alt: this.props.name })
+                )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'toggle' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'li',
-                    { className: 'item' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
-                        { to: 'user/pc', className: 'item__link', activeClassName: 'item__link--active' },
-                        'Meus PC\'s'
-                    )
-                ),
+                    'button',
+                    { className: 'button' },
+                    ' Abrir '
+                )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'nav',
+                { className: 'menu' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'li',
-                    { className: 'item' },
+                    'ul',
+                    { className: 'list' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
-                        { to: '/config', className: 'item__link', activeClassName: 'item__link--active' },
-                        'Configura\xE7\xF5es'
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'li',
-                    { className: 'item' },
+                        'li',
+                        { className: 'item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
+                            {
+                                to: '/user/home',
+                                className: 'item__link',
+                                activeClassName: 'item__link--active' },
+                            'Minha P\xE1gina'
+                        )
+                    ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        { href: '/logout', className: 'item__link' },
-                        'Sair'
+                        'li',
+                        { className: 'item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
+                            { to: 'user/pc', className: 'item__link', activeClassName: 'item__link--active' },
+                            'Meus PC\'s'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'li',
+                        { className: 'item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
+                            { to: '/config', className: 'item__link', activeClassName: 'item__link--active' },
+                            'Configura\xE7\xF5es'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'li',
+                        { className: 'item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'a',
+                            { href: '/logout', className: 'item__link' },
+                            'Sair'
+                        )
                     )
                 )
             )
@@ -5697,28 +5715,27 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 class User extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_2_react_http_request___default.a,
-      {
-        url: '/user',
-        method: 'get',
-        accept: 'application/json',
-        verbose: true
-      },
-      ({ error, result, loading }) => {
-        if (loading) {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            'carregando...'
-          );
-        } else {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            JSON.stringify(result.body)
-          );
+      'div',
+      { className: 'grid' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_http_request___default.a,
+        { url: '/user', method: 'get', accept: 'application/json', verbose: true },
+        ({ error, result, loading }) => {
+          if (loading) {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              null,
+              'carregando...'
+            );
+          } else {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              null,
+              JSON.stringify(result.body)
+            );
+          }
         }
-      }
+      )
     );
   }
 }
