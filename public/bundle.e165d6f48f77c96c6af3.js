@@ -5616,6 +5616,21 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 
 class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+
+    constructor(props) {
+        super(props);
+        this.state = { className: 'hidden' };
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        if (this.state.className === 'hidden') {
+            this.setState({ className: 'visible' });
+        } else {
+            this.setState({ className: 'hidden' });
+        }
+    }
+
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
@@ -5638,13 +5653,13 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 { className: 'toggle' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'button',
-                    { className: 'button' },
-                    ' Abrir '
+                    { className: 'button', onClick: this.handleClick },
+                    'Abrir'
                 )
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'nav',
-                { className: 'menu' },
+                { className: `menu ${this.state.className}` },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'ul',
                     { className: 'list' },

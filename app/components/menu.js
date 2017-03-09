@@ -2,6 +2,21 @@ import React, {Component} from 'react';
 import {Link} from 'react-router';
 
 class Menu extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {className: 'hidden'};
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        if (this.state.className === 'hidden') {
+            this.setState({className: 'visible'});
+        } else {
+            this.setState({className: 'hidden'});
+        }
+    }
+
     render() {
         return (
             <div>
@@ -15,9 +30,11 @@ class Menu extends Component {
                     </Link>
                 </figure>
                 <div className="toggle">
-                 <button className="button"> Abrir </button>
-                </div> 
-                <nav className="menu">
+                    <button className="button" onClick={this.handleClick}>
+                        Abrir
+                    </button>
+                </div>
+                <nav className={`menu ${this.state.className}`}>
                     <ul className="list">
                         <li className="item">
                             <Link

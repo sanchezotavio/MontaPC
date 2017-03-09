@@ -13,6 +13,15 @@ body {
   font-family: $font;
 }
 
+.hidden{
+  visibility: hidden;
+  position: absolute;
+}
+
+.visible{
+  visibility: visible;
+}
+
 .header {
   border-bottom: 3px solid $main-color;
   padding: 5px 0;
@@ -59,8 +68,9 @@ body {
 
 .logo {
   color: $main-color;
-  font-size: 18px;
+  font-size: 1.5em;
   font-weight: 400;
+  line-height: 36px;
 
   &__link {
     @extend .link;
@@ -107,6 +117,7 @@ body {
   border: $border;
   border-radius: 2px;
   box-shadow: 0 4px 21px rgba(89, 105, 129, .3), 0 1px 2px rgba(0, 0, 0, .05), 0 0 0 1px rgba(89, 104, 128, .1);
+  z-index: 2;
 }
 
 .list {

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && webpack && nodemon server",
+    "build": "npm run clean && webpack  && nodemon server",
     "clean": "rimraf public",
     "start-app": "webpack-dev-server",
     "start": "node server"
