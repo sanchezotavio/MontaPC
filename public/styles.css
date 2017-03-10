@@ -149,7 +149,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     min-width: 0;
     margin-left: 0;
     margin-right: 0;
-    padding-left: 20px;
+    padding-left: 10px;
     padding-right: 10px; }
   [class*='col-'] {
     width: auto;
@@ -214,6 +214,9 @@ body {
   background-color: #ffffff;
   font-family: "Arial"; }
 
+*:focus {
+  outline: none !important; }
+
 .hidden {
   visibility: hidden;
   position: absolute; }
@@ -243,7 +246,7 @@ body {
   margin-top: 5px;
   margin-bottom: 5px; }
 
-.button, .search__button {
+.button, .search__button, .account__button {
   background-color: #8460AA;
   color: #ffffff;
   text-decoration: none;
@@ -251,10 +254,27 @@ body {
   padding: 5px;
   border-radius: 5px;
   border: 0; }
+  .button--toggle {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCgk8dGl0bGU+DQoJCUljb24gVG9nZ2xlDQoJPC90aXRsZT4NCgk8cGF0aCBkPSJNMiA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHpNOSA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptNy0xNGEyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6IiBmaWxsPSIjYWFhYWFhIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+DQo8L3N2Zz4NCg==");
+    background-size: 70% 70%;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    margin-left: 5px; }
+  .button--toggle:active {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCgk8dGl0bGU+DQoJCUljb24gVG9nZ2xlDQoJPC90aXRsZT4NCgk8cGF0aCBkPSJNMiA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHpNOSA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptNy0xNGEyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6IiBmaWxsPSIjOERDQUU5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+DQo8L3N2Zz4NCg=="); }
+  .button--toggle:focus {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCgk8dGl0bGU+DQoJCUljb24gVG9nZ2xlDQoJPC90aXRsZT4NCgk8cGF0aCBkPSJNMiA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHpNOSA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptNy0xNGEyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6IiBmaWxsPSIjOERDQUU5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+DQo8L3N2Zz4NCg=="); }
 
-.link, .logo__link, .item__link {
+.link, .link--block, .logo__link, .account__link, .item__link {
   text-decoration: none;
   color: #8460AA; }
+  .link--block {
+    display: block; }
 
 .logo {
   color: #8460AA;
@@ -293,6 +313,16 @@ body {
   box-shadow: 0 4px 21px rgba(89, 105, 129, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(89, 104, 128, 0.1);
   z-index: 2; }
 
+.account {
+  color: #aaaaaa;
+  padding-top: 10px; }
+  .account__link {
+    font-size: .9em; }
+  .account__span {
+    font-size: .9em; }
+  .account__button {
+    font-size: .9em; }
+
 .list {
   list-style: none; }
 
@@ -308,14 +338,36 @@ body {
   .item__link:hover {
     background-color: #e7ebf3; }
 
-.figure--user {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 20px;
-  border: 1px solid #EEF1F6;
-  overflow: hidden;
-  background-color: #e7ebf3; }
+.figure {
+  width: 100%; }
+  .figure--user {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #EEF1F6;
+    overflow: hidden;
+    background-color: #e7ebf3; }
+
+.infos {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #EEF1F6;
+  padding: 10px 0 10px 0; }
+  .infos__figure {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: auto; }
+  .infos__img {
+    width: 100%; }
+
+.name {
+  width: 94%;
+  text-align: center;
+  padding: 10px 3% 0;
+  color: #aaaaaa; }
 
 .toggle {
   width: 30px;

@@ -5,8 +5,12 @@ class Menu extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {className: 'hidden'};
-        this.handleClick = this.handleClick.bind(this);
+        this.state = {
+            className: 'hidden'
+        };
+        this.handleClick = this
+            .handleClick
+            .bind(this);
     }
 
     handleClick() {
@@ -21,7 +25,7 @@ class Menu extends Component {
         return (
             <div>
                 <figure className="figure--user">
-                    <Link to="/user/home" className="link" activeClassName="link--active">
+                    <Link to="/user/home" className="link--block" activeClassName="link--active">
                         <img
                             className="img"
                             src={this.props.image}
@@ -30,11 +34,23 @@ class Menu extends Component {
                     </Link>
                 </figure>
                 <div className="toggle">
-                    <button className="button" onClick={this.handleClick}>
-                        Abrir
-                    </button>
+                    <button className="button--toggle" onClick={this.handleClick}></button>
                 </div>
                 <nav className={`menu ${this.state.className}`}>
+                    <div className="infos">
+                        <figure className="infos__figure">
+                            <Link to="/user/home" className="link--block" activeClassName="link--active">
+                                <img
+                                    className="infos__img"
+                                    src={this.props.image}
+                                    title={this.props.name}
+                                    alt={this.props.name}/>
+                            </Link>
+                        </figure>
+                        <div className="name">
+                            {this.props.name}
+                        </div>
+                    </div>
                     <ul className="list">
                         <li className="item">
                             <Link
