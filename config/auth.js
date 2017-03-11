@@ -1,15 +1,16 @@
-var stringSecurity = require('./stringSecurity')
+const stringSecurity = require('./stringSecurity')
+const domain = "http://localhost:5000"
 
 module.exports = {
   'facebookAuth': {
     'clientID': stringSecurity.facebookClientId(),
     'clientSecret': stringSecurity.facebookClientSecret(),
-    'callbackURL': 'http://montapc.herokuapp.com/auth/facebook/callback'
+    'callbackURL': `${domain}/auth/facebook/callback`
   },
 
   'googleAuth': {
     'clientID': stringSecurity.googleClientId(),
     'clientSecret': stringSecurity.googleClientSecret(),
-    'callbackURL': 'http://montapc.herokuapp.com/auth/google/callback'
+    'callbackURL': `${domain}/auth/google/callback`
   }
 }
