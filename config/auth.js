@@ -4,7 +4,7 @@ module.exports = {
   'facebookAuth': {
     'clientID': stringSecurity.facebookClientId(),
     'clientSecret': stringSecurity.facebookClientSecret(),
-    'callbackURL': 'http://montapc.herokuapp.com/facebook/callback'
+    'callbackURL': 'http://montapc.herokuapp.com/auth/facebook/callback'
   },
 
   'googleAuth': {
