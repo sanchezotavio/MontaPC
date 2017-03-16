@@ -9,7 +9,7 @@ module.exports = (app) => {
       PC.find( {$text: { $search: _what }}).exec()
         .then(
            (pc) => {
-            res.json(pc)
+            res.json({'pc': pc })
           },
           (erro) => {
             console.error(erro)
