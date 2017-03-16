@@ -16,8 +16,11 @@ var pcSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
+  image: {
+    type: String
+  },
   component: {
-   name: {
+    name: {
       type: String,
       text: true
     },
@@ -33,12 +36,12 @@ var pcSchema = new mongoose.Schema({
       type: String,
       text: true
     },
-    description:{
-       type: String,
+    description: {
+      type: String,
       text: true
     }
   }
- 
+
 }
 )
 
