@@ -66,8 +66,9 @@ body {
   text-decoration: none;
   font-size: .9em;
   padding: 5px;
-  border-radius: 5px;
+  @include border-radius(5px);
   border: 0;
+  cursor: pointer;
 
   &--toggle {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCgk8dGl0bGU+DQoJCUljb24gVG9nZ2xlDQoJPC90aXRsZT4NCgk8cGF0aCBkPSJNMiA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHpNOSA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptNy0xNGEyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6IiBmaWxsPSIjYWFhYWFhIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+DQo8L3N2Zz4NCg==');
@@ -132,8 +133,17 @@ body {
   padding: 20px 0;
 
   &__input {
-    width: 88%;
+    width: 90%;
     padding: 1%;
+    border: #ffffff;
+  }
+
+  &__group {
+    padding: 5px;
+    width: 96%;
+    margin: auto;
+    border: $border;
+    @include border-radius(2px);
   }
 
   &__button {
@@ -151,7 +161,7 @@ body {
   background-color: $light;
   margin-top: 15px;
   border: $border;
-  border-radius: 2px;
+  @include border-radius(2px);
   box-shadow: 0 4px 21px rgba(89, 105, 129, .3), 0 1px 2px rgba(0, 0, 0, .05), 0 0 0 1px rgba(89, 104, 128, .1);
   z-index: 2;
 }
@@ -204,7 +214,7 @@ body {
     display: inline-block;
     width: 30px;
     height: 30px;
-    border-radius: 20px;
+    @include border-radius(20px);
     border: $border;
     overflow: hidden;
     background-color: $bg-light;
@@ -220,7 +230,7 @@ body {
   &__figure {
     width: 80px;
     height: 80px;
-    border-radius: 50px;
+    @include border-radius(50px);
     overflow: hidden;
     margin: auto;
   }

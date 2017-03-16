@@ -20,7 +20,8 @@ var pcSchema = new mongoose.Schema({
     type: String
   },
   description: {
-    type: String
+    type: String,
+    text: true
   },
   component: {
     name: {
@@ -45,8 +46,7 @@ var pcSchema = new mongoose.Schema({
     }
   }
 
-}
-)
+})
 
 var PC
 

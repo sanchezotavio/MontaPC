@@ -4,8 +4,9 @@ import ShowItem from './showItem'
 
 const ShowList = (props) => {
   const shows = props.shows.map((show) => {
-    if(pc._id) {
-      return <ShowItem show={show} key={pc._id} onShowSelect={props.onShowSelect} />
+
+    if(show._id) {
+      return <ShowItem show={show} key={show._id}  />
     }
   });
   return (

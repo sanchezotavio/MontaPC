@@ -23,24 +23,26 @@ class Home extends Component {
     }
 
     search(term) {
-        axios.get(`http://montapc.herokuapp.com/search/${term}`).then((response) => {
+        axios.get(`/search/${term}`).then((response) => {   
+            console.log(response)       
             this.setState({
-                shows: response.data,
-                selectedShow: response.data[0],
+                shows: response.data.pc,
+                selectedShow: response.data.pc[0],
                 error: null
             });
         }).catch((error) => {
             this.setState({
-                error: error.response.data.message
+                error: error.response
             });
         })
     }
+    
 
     render() {
         return (
             <div className="grid">
                 <SearchBar onSearch={this.search} />
-                <ShowList shows={this.state.shows} onShowSelect={(selectedShow) => this.setState({ selectedShow })} />
+                <ShowList shows={this.state.shows} />
             </div>
         );
     }

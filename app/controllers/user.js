@@ -62,7 +62,14 @@ module.exports = (app) => {
             .exec()
             .then((pc) => {
               console.log(pc)
-              res.redirect(`/pc/${pc._id}`)
+              res.json({
+                data: [
+                  {
+                    success: true,
+                    pcid: pc._id
+                  }
+                ]
+              })
             }, (erro) => {
               console.error(erro)
               res
@@ -74,7 +81,14 @@ module.exports = (app) => {
             .create(data)
             .then((pc) => {
               console.log(pc)
-              res.redirect(`/pc/main/${pc._id}`)
+              res.json({
+                data: [
+                  {
+                    success: true,
+                    pcid: pc._id
+                  }
+                ]
+              })
             }, (erro) => {
               console.log(erro)
               res
@@ -83,7 +97,13 @@ module.exports = (app) => {
             })
         }
       } else {
-        res.redirect(`/pc/`)
+        res.json({
+          data: [
+            {
+              success: false
+            }
+          ]
+        })
       }
     },
 

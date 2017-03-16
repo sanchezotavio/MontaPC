@@ -20,10 +20,11 @@ class ShowItem extends React.Component{
       return null;
     }
     return (
-      <div className="item" onClick={() => this.props.onShowSelect(this.props.pc)}>
-        <img className="img" src={this.props.pc.image} alt="PC" onError={() => this.handleError()} />
+      <div className="item">
+    
+        <img className="img" src={this.props.show.image} alt="PC" onError={() => this.handleError()} />
         <div className="description">
-          <h4 className="title">{this.props.pc.name}</h4>
+          <h4 className="title">{this.props.show.name}</h4>
         </div>
       </div>
     );

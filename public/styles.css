@@ -1,3 +1,16 @@
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -273,8 +286,14 @@ body {
   text-decoration: none;
   font-size: .9em;
   padding: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
-  border: 0; }
+  border: 0;
+  cursor: pointer; }
   .button--toggle {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCgk8dGl0bGU+DQoJCUljb24gVG9nZ2xlDQoJPC90aXRsZT4NCgk8cGF0aCBkPSJNMiA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHpNOSA0YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptMCA3YTIgMiAwIDEgMCAwLTQgMiAyIDAgMCAwIDAgNHptNy0xNGEyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6bTAgN2EyIDIgMCAxIDAgMC00IDIgMiAwIDAgMCAwIDR6IiBmaWxsPSIjYWFhYWFhIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIC8+DQo8L3N2Zz4NCg==");
     background-size: 70% 70%;
@@ -316,8 +335,20 @@ body {
   width: 100%;
   padding: 20px 0; }
   .search__input {
-    width: 88%;
-    padding: 1%; }
+    width: 90%;
+    padding: 1%;
+    border: #ffffff; }
+  .search__group {
+    padding: 5px;
+    width: 96%;
+    margin: auto;
+    border: 1px solid #EEF1F6;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px; }
   .search__button {
     width: 8%;
     padding: 1%; }
@@ -330,6 +361,11 @@ body {
   background-color: #ffffff;
   margin-top: 15px;
   border: 1px solid #EEF1F6;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
   box-shadow: 0 4px 21px rgba(89, 105, 129, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(89, 104, 128, 0.1);
   z-index: 2; }
@@ -365,6 +401,11 @@ body {
     display: inline-block;
     width: 30px;
     height: 30px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
     border-radius: 20px;
     border: 1px solid #EEF1F6;
     overflow: hidden;
@@ -378,6 +419,11 @@ body {
   .infos__figure {
     width: 80px;
     height: 80px;
+    -webkit-border-radius: 50px;
+    -khtml-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
     border-radius: 50px;
     overflow: hidden;
     margin: auto; }

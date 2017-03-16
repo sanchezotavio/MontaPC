@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
       <form className="search" onSubmit={this
         .onSubmit
         .bind(this)}>
-        <div class="search__group">
+        <div className="search__group">
           <input
             value={this.state.term}
             type="text"
