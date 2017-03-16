@@ -19,6 +19,9 @@ var pcSchema = new mongoose.Schema({
   image: {
     type: String
   },
+  description: {
+    type: String
+  },
   component: {
     name: {
       type: String,

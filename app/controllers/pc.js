@@ -17,6 +17,7 @@ module.exports = (app) => {
             res.status(404).json(erro)
           })
     }
+    
   }
   return pcController
 }
