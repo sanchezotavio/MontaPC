@@ -1,37 +1,25 @@
-class formNewPC extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
+import React, {Component} from 'react';
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
+class formNewPC extends Component {
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
           Nome:
-          <input name="name" type="text" value={this.state.value} onChange={this.handleChange} />
+          <input name="name" type="text" />
         </label>
          <label>
           Descrição:
-          <input name="description" type="text" value={this.state.value} onChange={this.handleChange} />
+          <input name="description" type="text" />
         </label>
         <input type="submit" value="Submit" />
       </form>
     );
   }
 }
+
+
 
 
 export default formNewPC;

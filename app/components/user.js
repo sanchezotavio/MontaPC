@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom'
 
 import Request from 'react-http-request';
 
-import formNewPC from './formNewPC';
-
 class User extends Component {
   constructor(props) {
     super(props);
@@ -20,9 +18,6 @@ class User extends Component {
         <h1 className="title">{this.props.name}</h1>
         <div className="date">Desde: {this.props.date}
         </div>
-        </div>
-         <div className="col-1-2">
-         <formNewPC />
         </div>
       </div>
     );
