@@ -13,7 +13,5 @@ module.exports = function (app, passport) {
 
   app.get('/user/pcs', userController.loggedOn, userController.pcs)
 
-  app.get('/user/newpc', userController.loggedOn)
-
   app.post('/user/newpc', userController.loggedOn, userController.newPC)
 }

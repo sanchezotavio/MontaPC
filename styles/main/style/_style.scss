@@ -1,9 +1,12 @@
-$font: 'Arial';
+$font: 'Mosk Normal 400';
+$font-semi-bold: 'Mosk Semi-Bold 600';
+$font-bold: 'Mosk Extra-Bold 800';
+
 $bg: #ffffff;
 $light: #ffffff;
 $main-color: #8460AA;
 $bg-light: #e7ebf3;
-$bg-blue: #8DCAE9;
+$bg-alternarive: #8DCAE9;
 $bg-a: #aaaaaa;
 
 $border: 1px solid #EEF1F6;
@@ -102,7 +105,7 @@ body {
 .logo {
   color: $main-color;
   font-size: 1.5em;
-  font-weight: 400;
+  font-family: $font-bold;
   line-height: 36px;
 
   &__link {
@@ -212,8 +215,8 @@ body {
   width: 100%;
   text-align: center;
   border-bottom: $border;
-  padding: 10px 0 10px 0;
-  
+  padding: 10px 0;
+
   &__figure {
     width: 80px;
     height: 80px;
@@ -232,6 +235,7 @@ body {
   text-align: center;
   padding: 10px 3% 0;
   color: $bg-a;
+  font-family: $font-semi-bold;
 }
 
 .toggle {

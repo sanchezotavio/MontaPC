@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react'
+
+import {Link} from 'react-router'
 
 class Menu extends Component {
 

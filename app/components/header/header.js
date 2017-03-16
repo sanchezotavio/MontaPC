@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 
-import {Link} from 'react-router';
+import {Link} from 'react-router'
 
-import Menu from '../components/menu'
+import Request from 'react-http-request'
 
-import Request from 'react-http-request';
+import Menu from './menu'
 
 class Header extends Component {
 

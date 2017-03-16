@@ -1,9 +1,15 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router';
-import SearchBar from './searchBar'
-import ShowList from './showList';
-import axios from 'axios';
+import React, { Component } from 'react'
+
+import { connect } from 'react-redux'
+
+import { Link } from 'react-router'
+
+import SearchBar from '../search/searchBar'
+
+import ShowList from '../pc/showList'
+
+import axios from 'axios'
+
 class Home extends Component {
     constructor(props) {
         super(props);

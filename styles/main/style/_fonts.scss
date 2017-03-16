@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'Mosk Normal 400';
+	src: url('../styles/fonts/Mosk/MoskNormal400.eot');
+	src: url('../styles/fonts/Mosk/MoskNormal400.eot?#iefix') format('embedded-opentype'),
+		url('../styles/fonts/Mosk/MoskNormal400.woff2') format('woff2'),
+		url('../styles/fonts/Mosk/MoskNormal400.woff') format('woff'),
+		url('../styles/fonts/Mosk/MoskNormal400.ttf') format('truetype'),
+		url('../styles/fonts/Mosk/MoskNormal400.svg#MoskNormal400') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mosk Extra-Bold 800';
+	src: url('../styles/fonts/Mosk/MoskExtra-Bold800.eot');
+	src: url('../styles/fonts/Mosk/MoskExtra-Bold800.eot?#iefix') format('embedded-opentype'),
+		url('../styles/fonts/Mosk/MoskExtra-Bold800.woff2') format('woff2'),
+		url('../styles/fonts/Mosk/MoskExtra-Bold800.woff') format('woff'),
+		url('../styles/fonts/Mosk/MoskExtra-Bold800.ttf') format('truetype'),
+		url('../styles/fonts/Mosk/MoskExtra-Bold800.svg#MoskExtra-Bold800') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mosk Semi-Bold 600';
+	src: url('../styles/fonts/Mosk/MoskSemi-Bold600.eot');
+	src: url('../styles/fonts/Mosk/MoskSemi-Bold600.eot?#iefix') format('embedded-opentype'),
+		url('../styles/fonts/Mosk/MoskSemi-Bold600.woff2') format('woff2'),
+		url('../styles/fonts/Mosk/MoskSemi-Bold600.woff') format('woff'),
+		url('../styles/fonts/Mosk/MoskSemi-Bold600.ttf') format('truetype'),
+		url('../styles/fonts/Mosk/MoskSemi-Bold600.svg#MoskSemi-Bold600') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}

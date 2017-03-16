@@ -18,8 +18,10 @@ const config = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
-      },
-      {
+      }, {
+        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+        loader: "file-loader"
+      }, {
         test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
@@ -31,20 +33,22 @@ const config = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader', 'eslint-loader'],
+        loaders: [
+          'babel-loader', 'eslint-loader'
+        ],
         exclude: /node_modules/
       }
     ]
   },
-  
+
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ['vendor', 'manifest']
-    }),
-    new HtmlWebPackPlugin({
-      template: './app/index.html'
-    })
+    new webpack
+      .optimize
+      .CommonsChunkPlugin({
+        name: ['vendor', 'manifest']
+      }),
+    new HtmlWebPackPlugin({template: './app/index.html'}),
   ]
 }
 

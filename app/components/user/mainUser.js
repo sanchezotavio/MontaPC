@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import ReactDOM from 'react-dom'
 
-import Request from 'react-http-request';
+import Request from 'react-http-request'
 
 import User from './user'
 
