@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import ShowItem from './showItem'
+import ShowItem from './showItem';
 
 const ShowList = (props) => {
   const shows = props.shows.map((show) => {

@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
+
 import axios from 'axios'
 
 import Router from 'react-router'
+
 class formNewPC extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.state = {
       name: '',
       description: ''
@@ -17,6 +19,8 @@ class formNewPC extends Component {
     this.handleSubmit = this
       .handleSubmit
       .bind(this);
+
+    context.router
   }
 
   handleChange(event) {
@@ -36,7 +40,16 @@ class formNewPC extends Component {
         const data = response.data.data[0];
         if (data.success === true) {
           console.log(data)
-        } else {}
+          this
+            .context
+            .router
+            .push(`/pc/${data.pcid}`)
+        } else {
+          this
+            .context
+            .router
+            .push(`/user`);
+        }
       })
       .catch((error) => {
         console.log(error)
@@ -69,5 +82,9 @@ class formNewPC extends Component {
     );
   }
 }
+
+formNewPC.contextTypes = {
+  router: React.PropTypes.object.isRequired
+};
 
 export default formNewPC;

@@ -6,7 +6,7 @@ module.exports = (app) => {
   var pcController = {
     load: (req, res) => {
       var _id = req.params.id
-      Event.find({ '_id': _id }).exec()
+      PC.find({ '_id': _id }).exec()
         .then(
           (pc) => {
             if (!pc) throw new Error('PC not found')

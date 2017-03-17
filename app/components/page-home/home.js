@@ -24,7 +24,6 @@ class Home extends Component {
 
     search(term) {
         axios.get(`/search/${term}`).then((response) => {   
-            console.log(response)       
             this.setState({
                 shows: response.data.pc,
                 selectedShow: response.data.pc[0],
