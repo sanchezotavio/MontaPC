@@ -6030,7 +6030,6 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
     search(term) {
         __WEBPACK_IMPORTED_MODULE_5_axios___default.a.get(`/search/${term}`).then(response => {
-            console.log(response);
             this.setState({
                 shows: response.data.pc,
                 selectedShow: response.data.pc[0],
@@ -6072,7 +6071,7 @@ class pagePC extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            null,
+            { className: 'grid' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'h2',
                 null,
