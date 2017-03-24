@@ -381,7 +381,7 @@ module.exports = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Router__ = __webpack_require__(278);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Router__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Link__ = __webpack_require__(117);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_1__Link__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_1__Link__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__IndexLink__ = __webpack_require__(274);
 /* unused harmony reexport IndexLink */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__withRouter__ = __webpack_require__(289);
@@ -389,11 +389,11 @@ module.exports = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__IndexRedirect__ = __webpack_require__(275);
 /* unused harmony reexport IndexRedirect */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__IndexRoute__ = __webpack_require__(276);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_5__IndexRoute__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_5__IndexRoute__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(119);
 /* unused harmony reexport Redirect */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(277);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__RouteUtils__ = __webpack_require__(19);
 /* unused harmony reexport createRoutes */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__RouterContext__ = __webpack_require__(71);
@@ -410,9 +410,9 @@ module.exports = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__applyRouterMiddleware__ = __webpack_require__(280);
 /* unused harmony reexport applyRouterMiddleware */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__browserHistory__ = __webpack_require__(281);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_15__browserHistory__["a"]; });
+/* unused harmony reexport browserHistory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hashHistory__ = __webpack_require__(285);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_16__hashHistory__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_16__hashHistory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__createMemoryHistory__ = __webpack_require__(121);
 /* unused harmony reexport createMemoryHistory */
 /* components */
@@ -4623,18 +4623,14 @@ const rootReducer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["d
 
 
 /* harmony default export */ __webpack_exports__["a"] = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_react_router__["a" /* Router */],
-    { history: __WEBPACK_IMPORTED_MODULE_1_react_router__["c" /* hashHistory */] },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_react_router__["d" /* Route */],
-        { component: __WEBPACK_IMPORTED_MODULE_2__components_app__["a" /* default */] },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* IndexRoute */], { component: __WEBPACK_IMPORTED_MODULE_3__components_page_home_home__["a" /* default */] }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["d" /* Route */], { path: '/login', component: __WEBPACK_IMPORTED_MODULE_7__components_access_access__["a" /* default */] }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["d" /* Route */], { path: '/user/home', component: __WEBPACK_IMPORTED_MODULE_4__components_page_user_pageUser__["a" /* default */] }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["d" /* Route */], { path: '/user/newpc', component: __WEBPACK_IMPORTED_MODULE_5__components_page_user_pageNewPC__["a" /* default */] }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["d" /* Route */], { path: '/pc/:_id', component: __WEBPACK_IMPORTED_MODULE_6__components_page_pc_pagePC__["a" /* default */] }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["d" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_3__components_page_home_home__["a" /* default */] })
-    )
+    __WEBPACK_IMPORTED_MODULE_1_react_router__["c" /* Route */],
+    { component: __WEBPACK_IMPORTED_MODULE_2__components_app__["a" /* default */] },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["d" /* IndexRoute */], { component: __WEBPACK_IMPORTED_MODULE_3__components_page_home_home__["a" /* default */] }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["c" /* Route */], { path: '/login', component: __WEBPACK_IMPORTED_MODULE_7__components_access_access__["a" /* default */] }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["c" /* Route */], { path: '/user/home', component: __WEBPACK_IMPORTED_MODULE_4__components_page_user_pageUser__["a" /* default */] }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["c" /* Route */], { path: '/user/newpc', component: __WEBPACK_IMPORTED_MODULE_5__components_page_user_pageNewPC__["a" /* default */] }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["c" /* Route */], { path: '/pc/:_id', component: __WEBPACK_IMPORTED_MODULE_6__components_page_pc_pagePC__["a" /* default */] }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_3__components_page_home_home__["a" /* default */] })
 );
 
 /***/ }),
@@ -5585,7 +5581,7 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                         'h1',
                         { className: 'logo' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_1_react_router__["f" /* Link */],
+                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
                             { to: '/', className: 'logo__link' },
                             'Monta',
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -5624,7 +5620,7 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                                         'div',
                                         { className: 'account' },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            __WEBPACK_IMPORTED_MODULE_1_react_router__["f" /* Link */],
+                                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
                                             { to: '/login', className: 'account__link', activeClassName: 'button--active' },
                                             'Acessar'
                                         ),
@@ -5634,7 +5630,7 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                                             ' ou '
                                         ),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            __WEBPACK_IMPORTED_MODULE_1_react_router__["f" /* Link */],
+                                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
                                             { to: '/login', className: 'account__button', activeClassName: 'button--active' },
                                             'Cadastrar'
                                         )
@@ -5697,7 +5693,7 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 'figure',
                 { className: 'figure--user' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_router__["f" /* Link */],
+                    __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
                     { to: '/user/home', className: 'link--block', activeClassName: 'link--active' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
                         className: 'img',
@@ -5721,7 +5717,7 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                         'figure',
                         { className: 'infos__figure' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_1_react_router__["f" /* Link */],
+                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
                             { to: '/user/home', className: 'link--block', activeClassName: 'link--active' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
                                 className: 'infos__img',
@@ -5743,7 +5739,7 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                         'li',
                         { className: 'item' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_1_react_router__["f" /* Link */],
+                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
                             {
                                 to: '/user/home',
                                 className: 'item__link',
@@ -5755,7 +5751,7 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                         'li',
                         { className: 'item' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_1_react_router__["f" /* Link */],
+                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
                             { to: 'user/pc', className: 'item__link', activeClassName: 'item__link--active' },
                             'Meus PC\'s'
                         )
@@ -5764,7 +5760,7 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                         'li',
                         { className: 'item' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_1_react_router__["f" /* Link */],
+                            __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
                             { to: '/config', className: 'item__link', activeClassName: 'item__link--active' },
                             'Configura\xE7\xF5es'
                         )
@@ -6018,7 +6014,7 @@ class pageUser extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 'div',
                 { className: 'col-8-12' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_3_react_router__["f" /* Link */],
+                    __WEBPACK_IMPORTED_MODULE_3_react_router__["e" /* Link */],
                     { to: '/user/newpc', className: 'button' },
                     'Cadastrar Novo PC'
                 )
@@ -6217,7 +6213,7 @@ class ShowItem extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         'div',
         { className: 'PC' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_react_router__["f" /* Link */],
+          __WEBPACK_IMPORTED_MODULE_1_react_router__["e" /* Link */],
           { to: `/pc/${this.props.show._id}`, className: 'link' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'h2',
@@ -6432,7 +6428,7 @@ class showUser extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                         'figure',
                         { className: 'figure' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_4_react_router__["f" /* Link */],
+                            __WEBPACK_IMPORTED_MODULE_4_react_router__["e" /* Link */],
                             { to: `/user/${this.state.id}`, className: 'link' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: this.state.image, className: 'user__img' })
                         )
@@ -8301,7 +8297,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createRouterHistory__ = __webpack_require__(122);
 
 
-/* harmony default export */ __webpack_exports__["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory___default.a);
+/* unused harmony default export */ var _unused_webpack_default_export = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory___default.a);
 
 /***/ }),
 /* 282 */
@@ -11303,7 +11299,7 @@ const store = createStoreWithMiddleware(__WEBPACK_IMPORTED_MODULE_6__reducers_in
 __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
   __WEBPACK_IMPORTED_MODULE_3_react_redux__["a" /* Provider */],
   { store: store },
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_router__["a" /* Router */], { history: __WEBPACK_IMPORTED_MODULE_5_react_router__["b" /* browserHistory */], routes: __WEBPACK_IMPORTED_MODULE_7__routes_js__["a" /* default */] })
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_router__["a" /* Router */], { history: __WEBPACK_IMPORTED_MODULE_5_react_router__["b" /* hashHistory */], routes: __WEBPACK_IMPORTED_MODULE_7__routes_js__["a" /* default */] })
 ), document.getElementById('main'));
 
 /***/ })

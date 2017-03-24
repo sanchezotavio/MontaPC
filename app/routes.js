@@ -10,7 +10,7 @@ import PC from './components/page-pc/pagePC';
 import Access from './components/access/access'
 
 export default(
-    <Router history={hashHistory}>
+
         <Route component={App}>
             <IndexRoute component={Home}/>
             <Route path="/login" component={Access}/>
@@ -19,5 +19,5 @@ export default(
             <Route path="/pc/:_id" component={PC}/>
             <Route path="*" component={Home}/>
         </Route>
-    </Router>
+
 )
