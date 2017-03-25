@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import ReactDOM from 'react-dom'
 
@@ -6,9 +6,11 @@ import Request from 'react-http-request'
 
 import User from './user'
 
-import {Link} from 'react-router'
+import { Link } from 'react-router'
 
 import axios from 'axios'
+
+import IconLoading from '../loading/icon'
 
 class showUser extends Component {
     constructor(props, context) {
@@ -27,7 +29,7 @@ class showUser extends Component {
             .get(`/user/main/${this.props.id}`)
             .then(response => {
                 const user = response.data[0]
-                this.setState({name: user.name, image: user.imageUser, id: user._id, loading: false})
+                this.setState({ name: user.name, image: user.imageUser, id: user._id, loading: false })
             })
             .catch((error) => {
                 console.log(error.response)
@@ -37,9 +39,7 @@ class showUser extends Component {
     render() {
         if (this.state.loading) {
             return (
-                <div className="loading">
-                    Carregando...
-                </div>
+                <IconLoading />
             );
         } else {
             return (
@@ -47,7 +47,7 @@ class showUser extends Component {
                     <div className="col-1-2">
                         <figure className="figure">
                             <Link to={`/user/${this.state.id}`} className="link">
-                                <img src={this.state.image} className="user__img"/>
+                                <img src={this.state.image} className="user__img" />
                             </Link>
                         </figure>
                         <h1 className="title">{this.state.name}</h1>

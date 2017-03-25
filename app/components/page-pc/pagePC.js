@@ -8,6 +8,8 @@ import PC from '../pc/pc'
 
 import ShowUser from '../user/showUser'
 
+import IconLoading from '../loading/icon'
+
 class pagePC extends Component {
     constructor(props) {
         super(props);
@@ -46,7 +48,7 @@ class pagePC extends Component {
     render() {
         if (this.state.loading) {
             return (
-                <div className="loading">Carregando...</div>
+                <IconLoading />
             );
         } else {
             return (

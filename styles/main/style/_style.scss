@@ -32,13 +32,36 @@ body {
 }
 
 .header {
-  border-bottom: 3px solid $main-color;
-  padding: 5px 0;
   position: relative;
+      padding-top: 3px;
 }
+
+.header:after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 49px;
+  height: 3px;
+  left: 0;
+  background: linear-gradient(to right, $main-color, $bg-alternarive);
+}
+
+
 
 .img {
   width: 100%;
+}
+
+.icon{
+  width: 50px;
+
+  &--load{
+    @extend .icon;
+    display: inline-block;
+    background-color: red;
+    background: url('../styles/img/load.svg');
+    height: 12.5px
+  }
 }
 
 .title {
@@ -108,9 +131,18 @@ body {
   font-size: 1.5em;
   font-family: $font-bold;
   line-height: 36px;
-
+ 
   &__link {
     @extend .link;
+  }
+
+  &__main{
+    width: 140px;
+    height: 30px;
+     background: url('../styles/img/MontaPC.svg');
+     background-size: 140px 30px;
+     background-repeat: no-repeat;
+     display: inline-block;
   }
 }
 
@@ -168,7 +200,7 @@ body {
 
 .account {
   color: $bg-a;
-  padding-top: 10px;
+  padding-top: 6px;
 
   &__link {
     @extend .link;

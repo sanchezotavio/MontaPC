@@ -224,21 +224,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @font-face {
   font-family: 'Mosk Normal 400';
   src: url(07cb2d5ca7a11eaa2960b0070c67a860.eot);
-  src: url(07cb2d5ca7a11eaa2960b0070c67a860.eot?#iefix) format("embedded-opentype"), url(edacb464c9a1c011f5c31bf34ff6ba55.woff2) format("woff2"), url(0b900a33ddcc1d5d7eb6d4a2ba22cba8.woff) format("woff"), url(4c4d126578330cb5343c3008a143f1b3.ttf) format("truetype"), url(c12ea7d0f5922b851ad7531208c1ecf5.svg#MoskNormal400) format("svg");
+  src: url(07cb2d5ca7a11eaa2960b0070c67a860.eot?#iefix) format("embedded-opentype"), url(edacb464c9a1c011f5c31bf34ff6ba55.woff2) format("woff2"), url(0b900a33ddcc1d5d7eb6d4a2ba22cba8.woff) format("woff"), url(4c4d126578330cb5343c3008a143f1b3.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Mosk Extra-Bold 800';
   src: url(73de4b5ec67d4596d5e8de299e07101e.eot);
-  src: url(73de4b5ec67d4596d5e8de299e07101e.eot?#iefix) format("embedded-opentype"), url(f66a9b4da3ca4f4835ab5e3e5f0cdae1.woff2) format("woff2"), url(977a3fa3ecdfecf959b532143c7a6b80.woff) format("woff"), url(8ce775b54317abf02030afe81a57fdf4.ttf) format("truetype"), url(b24b1849b8715b82bfd4f43828583330.svg#MoskExtra-Bold800) format("svg");
+  src: url(73de4b5ec67d4596d5e8de299e07101e.eot?#iefix) format("embedded-opentype"), url(f66a9b4da3ca4f4835ab5e3e5f0cdae1.woff2) format("woff2"), url(977a3fa3ecdfecf959b532143c7a6b80.woff) format("woff"), url(8ce775b54317abf02030afe81a57fdf4.ttf) format("truetype");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Mosk Semi-Bold 600';
   src: url(728c7d114fd385bc7f966ac3c1b4608f.eot);
-  src: url(728c7d114fd385bc7f966ac3c1b4608f.eot?#iefix) format("embedded-opentype"), url(a6a716cf88d157d964d6d1b9cc45e400.woff2) format("woff2"), url(74cdf597f41e22809994fdb26994aaf8.woff) format("woff"), url(57de2e9ac72fd0b469f5d2885518a6f8.ttf) format("truetype"), url(5b802264321bff3785c267af92632ec4.svg#MoskSemi-Bold600) format("svg");
+  src: url(728c7d114fd385bc7f966ac3c1b4608f.eot?#iefix) format("embedded-opentype"), url(a6a716cf88d157d964d6d1b9cc45e400.woff2) format("woff2"), url(74cdf597f41e22809994fdb26994aaf8.woff) format("woff"), url(57de2e9ac72fd0b469f5d2885518a6f8.ttf) format("truetype");
   font-weight: bold;
   font-style: normal; }
 
@@ -259,12 +259,28 @@ body {
   visibility: visible; }
 
 .header {
-  border-bottom: 3px solid #8460AA;
-  padding: 5px 0;
-  position: relative; }
+  position: relative;
+  padding-top: 3px; }
+
+.header:after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 49px;
+  height: 3px;
+  left: 0;
+  background: linear-gradient(to right, #8460AA, #8DCAE9); }
 
 .img, .movie__img {
   width: 100%; }
+
+.icon, .icon--load {
+  width: 50px; }
+  .icon--load {
+    display: inline-block;
+    background-color: red;
+    background: url(b2ec8744052dc7a63755d33b814a24ce.svg);
+    height: 12.5px; }
 
 .title {
   margin: 1em 0;
@@ -321,6 +337,13 @@ body {
   font-size: 1.5em;
   font-family: "Mosk Extra-Bold 800";
   line-height: 36px; }
+  .logo__main {
+    width: 140px;
+    height: 30px;
+    background: url(2a48e75aed735b9010b2690cfd3f34a7.svg);
+    background-size: 140px 30px;
+    background-repeat: no-repeat;
+    display: inline-block; }
 
 .align-left {
   text-align: left; }
@@ -372,7 +395,7 @@ body {
 
 .account {
   color: #aaaaaa;
-  padding-top: 10px; }
+  padding-top: 6px; }
   .account__link {
     font-size: .9em; }
   .account__span {

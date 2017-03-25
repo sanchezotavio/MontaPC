@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 const VENDOR_LIBS = ['react', 'react-dom']
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const config = {
   entry: {
@@ -48,7 +49,8 @@ const config = {
       .CommonsChunkPlugin({
         name: ['vendor', 'manifest']
       }),
-    new HtmlWebPackPlugin({template: './app/index.html'}),
+    new HtmlWebPackPlugin({ template: './app/index.html' }),
+    new FaviconsWebpackPlugin('./styles/img/favicon/favicon-main.png')
   ]
 }
 

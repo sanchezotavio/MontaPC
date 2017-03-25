@@ -6,6 +6,8 @@ import Request from 'react-http-request'
 
 import Menu from './menu'
 
+import IconLoading from '../loading/icon'
+
 class Header extends Component {
 
     render() {
@@ -15,7 +17,7 @@ class Header extends Component {
                     <div className="col-1-2 mobile-col-1-3 clear--space">
                         <h1 className="logo">
                             <Link to="/" className="logo__link">
-                                Monta<span className="logo__span">PC</span>
+                               <span className="logo__main"></span>
                             </Link>
                         </h1>
                     </div>
@@ -27,7 +29,7 @@ class Header extends Component {
                             verbose={true}>
                             {({error, result, loading}) => {
                                 if (loading) {
-                                    return <div>carregando...</div>;
+                                    return <IconLoading />;
                                 } else {
                                     if (validateUser(JSON.stringify(result.body.success))) {
                                         return <Menu

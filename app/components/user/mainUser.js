@@ -6,13 +6,15 @@ import Request from 'react-http-request'
 
 import User from './user'
 
+import IconLoading from '../loading/icon'
+
 class mainUser extends Component {
     render() {
         return (
             <Request url='/user' method='get' accept='application/json' verbose={true}>
                 {({error, result, loading}) => {
                     if (loading) {
-                        return <div>carregando...</div>;
+                        return <IconLoading />;
                     } else {
                         return <User
                             name={result.body.data.name}
