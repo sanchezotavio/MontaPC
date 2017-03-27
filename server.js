@@ -22,6 +22,12 @@ var stringSecurity = require('./config/stringSecurity')
 
 var path = require('path');
 
+var compression = require('compression');
+
+/* compression */
+
+app.use(compression());
+
 /* Application */
 
 app.use(helmet())

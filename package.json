@@ -23,6 +23,7 @@
     "express-load": "^1.1.15",
     "express-session": "^1.14.2",
     "helmet": "^2.3.0",
+    "history": "^1.8.4",
     "loader-utils": "^1.0.2",
     "method-override": "^2.3.6",
     "mongo-sanitize": "^1.0.0",
@@ -31,13 +32,13 @@
     "mongoose-bcrypt": "^1.4.2",
     "mongoose-findorcreate": "^0.1.2",
     "morgan": "^1.7.0",
+    "node-cache": "^4.1.1",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
     "passport-google-oauth": "^1.0.0",
     "react-http-request": "^1.0.3",
     "react-redux": "^5.0.3",
-    "redux": "^3.6.0",
-    "history": "^1.8.4"
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
