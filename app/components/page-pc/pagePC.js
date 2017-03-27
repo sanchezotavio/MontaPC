@@ -8,7 +8,7 @@ import PC from '../pc/pc'
 
 import ShowUser from '../user/showUser'
 
-import IconLoading from '../loading/icon'
+import Loading from '../loading/icon'
 
 class pagePC extends Component {
     constructor(props) {
@@ -47,7 +47,7 @@ class pagePC extends Component {
 
     render() {
         if (this.state.loading) {
-            return (<IconLoading type="all"/>);
+            return (<Loading type="all"/>);
         } else {
             return (
                 <div className="page">

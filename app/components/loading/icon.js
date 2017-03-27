@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
-class IconLoading extends Component {
+class Loading extends Component {
   constructor(props) {
     super(props);
   }
-  render() {
+  render() {    
     if (this.props.type == "all") {
       return (
         <div className="load">
@@ -16,8 +16,9 @@ class IconLoading extends Component {
         <div className="icon--load"></div>
       )
     }
-
   }
 }
 
-export default IconLoading;
+export default Loading;
+
+

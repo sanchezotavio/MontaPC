@@ -6,7 +6,7 @@ import Request from 'react-http-request'
 
 import User from './user'
 
-import IconLoading from '../loading/icon'
+import Loading from '../loading/icon'
 
 class mainUser extends Component {
     render() {
@@ -14,7 +14,7 @@ class mainUser extends Component {
             <Request url='/user' method='get' accept='application/json' verbose={true}>
                 {({error, result, loading}) => {
                     if (loading) {
-                        return <IconLoading />;
+                        return <Loading />;
                     } else {
                         return <User
                             name={result.body.data.name}

@@ -49,9 +49,34 @@ const config = {
       .CommonsChunkPlugin({
         name: ['vendor', 'manifest']
       }),
-    new HtmlWebPackPlugin({ template: './app/index.html' }),
-    new FaviconsWebpackPlugin('./styles/img/favicon/favicon-main.png')
-  ]
+    new HtmlWebPackPlugin({template: './app/index.html'}),
+    new FaviconsWebpackPlugin('./styles/img/favicon/favicon-main.png'),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack
+      .optimize
+      .UglifyJsPlugin({
+        debug: false,
+        minimize: true,
+        sourceMap: false,
+        output: {
+          comments: false
+        },
+        compressor: { // eslint-disable-line camelcase
+          warnings: false,
+          unused: true,
+          dead_code: true
+        },
+        mangle: false
+      })
+
+  ],
+  devServer: {
+    historyApiFallback: true
+  }
 }
 
 module.exports = config

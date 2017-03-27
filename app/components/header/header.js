@@ -6,7 +6,7 @@ import Request from 'react-http-request'
 
 import Menu from './menu'
 
-import IconLoading from '../loading/icon'
+import Loading from '../loading/icon'
 
 class Header extends Component {
 
@@ -29,7 +29,7 @@ class Header extends Component {
                             verbose={true}>
                             {({error, result, loading}) => {
                                 if (loading) {
-                                    return <IconLoading />;
+                                    return <Loading />;
                                 } else {
                                     if (validateUser(JSON.stringify(result.body.success))) {
                                         return <Menu

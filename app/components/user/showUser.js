@@ -10,7 +10,7 @@ import {Link} from 'react-router'
 
 import axios from 'axios'
 
-import IconLoading from '../loading/icon'
+import Loading from '../loading/icon'
 
 class showUser extends Component {
     constructor(props, context) {
@@ -38,7 +38,7 @@ class showUser extends Component {
 
     render() {
         if (this.state.loading) {
-            return (<IconLoading/>);
+            return (<Loading/>);
         } else {
             return (
                 <div className="user">
