@@ -12,11 +12,15 @@ class pageUser extends Component {
     render() {
         return (
             <div className="grid">
-                <div className="col-4-12">
-                    <MainUser/>
+                <div className="col-3-12">
+                    <div className="box">
+                        <MainUser/>
+                    </div>
                 </div>
-                <div className="col-8-12">
-                    <Link to="/user/newpc" className="button">Cadastrar Novo PC</Link>
+                <div className="col-9-12">
+                    <div className="box">
+                        <Link to="/user/newpc" className="button">Cadastrar Novo PC</Link>
+                    </div>
                 </div>
             </div>
         );

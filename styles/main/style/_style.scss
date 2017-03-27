@@ -5,17 +5,18 @@ $font-bold: 'Mosk Extra-Bold 800';
 $bg: #ffffff;
 $light: #ffffff;
 $main-color: #8460AA;
-$bg-light: #e7ebf3;
-$bg-alternarive: #8DCAE9;
-$bg-a: #aaaaaa;
+$bg-light: #f7f8fb;
+$bg-alternarive: #8DCAE8;
+$bg-a: #96A3B7;
 
 $border: 1px solid #EEF1F6;
 
 body {
   margin: 0;
   position: relative;
-  background-color: $bg;
+  background-color: $bg-light;
   font-family: $font;
+  padding-top: 60px;
 }
 
 *:focus {
@@ -33,35 +34,59 @@ body {
 
 .header {
   position: relative;
-      padding-top: 3px;
+  padding-top: 5px;
+
+  &--top {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+  }
 }
 
 .header:after {
   content: '';
   width: 100%;
   position: absolute;
-  top: 49px;
+  top: 52px;
   height: 3px;
   left: 0;
   background: linear-gradient(to right, $main-color, $bg-alternarive);
 }
 
-
-
 .img {
   width: 100%;
 }
 
-.icon{
+.icon {
   width: 50px;
 
-  &--load{
+  &--load {
     @extend .icon;
     display: inline-block;
-    background-color: red;
     background: url('../styles/img/load.svg');
-    height: 12.5px
+    height: 12.5px;
   }
+
+  &--load--center {
+    @extend .icon;
+    display: inline-block;
+    background: url('../styles/img/load-all.svg');
+    height: 12.5px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.load {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  text-align: center;
 }
 
 .title {
@@ -80,6 +105,10 @@ body {
   &--space {
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+
+  &--p-l {
+    padding-left: 2px;
   }
 }
 
@@ -131,18 +160,18 @@ body {
   font-size: 1.5em;
   font-family: $font-bold;
   line-height: 36px;
- 
+
   &__link {
     @extend .link;
   }
 
-  &__main{
+  &__main {
     width: 140px;
     height: 30px;
-     background: url('../styles/img/MontaPC.svg');
-     background-size: 140px 30px;
-     background-repeat: no-repeat;
-     display: inline-block;
+    background: url('../styles/img/MontaPC.svg');
+    background-size: 140px 30px;
+    background-repeat: no-repeat;
+    display: inline-block;
   }
 }
 
@@ -174,6 +203,7 @@ body {
     padding: 5px;
     width: 96%;
     margin: auto;
+    background-color: #ffffff;
     border: $border;
     @include border-radius(2px);
   }
@@ -182,6 +212,18 @@ body {
     @extend .button;
     width: 8%;
     padding: 1%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .search {
+    &__input {
+      width: 78%;
+    }
+
+    &__button {
+      width: 20%;
+    }
   }
 }
 
@@ -221,6 +263,18 @@ body {
   list-style: none;
 }
 
+.pc {
+  &__title {
+    color: $main-color;
+    font-size: 1.2em;
+    border-bottom: $border;
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 0 5px 10px;
+  }
+}
+
 .item {
   list-style: none;
   text-align: center;
@@ -250,6 +304,32 @@ body {
     border: $border;
     overflow: hidden;
     background-color: $bg-light;
+  }
+
+  &--user-pc {
+    margin: 5% auto;
+    width: 70%;
+    display: inline-block;
+    @include border-radius(100px);
+    border: $border;
+    overflow: hidden;
+    background-color: $bg-light;
+  }
+}
+
+.user {
+  display: inline-block;
+
+  &__img {
+    border-radius: 100%;
+    border: 1px solid $bg-a;
+  }
+
+  &__title {
+    font-family: $font-semi-bold;
+    font-size: .9em;
+    line-height: 1.2em;
+    color: $bg-a;
   }
 }
 
@@ -287,31 +367,10 @@ body {
   float: right;
 }
 
-.item::nth-last-child() {
-  border-bottom: 0;
-}
-
-.movies {
-  width: 20%;
-  float: right;
-}
-
-.movie {
-  width: 100%;
-}
-
-.play__movie {
-  @extend .movie;
-  height: 500px;
-}
-
-.play {
-  width: 70%;
-  float: left;
-}
-
-.movie {
-  &__img {
-    @extend .img;
-  }
+.box {
+  width: 96%;
+  padding: 2%;
+  background-color: $bg;
+  border: 1px solid #EEF1F6;
+  text-align: center;
 }

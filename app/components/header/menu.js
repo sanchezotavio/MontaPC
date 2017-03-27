@@ -62,8 +62,8 @@ class Menu extends Component {
                             </Link>
                         </li>
                         <li className="item">
-                            <Link to="user/pc" className="item__link" activeClassName="item__link--active">
-                                Meus PC's
+                            <Link to="user/newpc" className="item__link" activeClassName="item__link--active">
+                                Criar Novo PC
                             </Link>
                         </li>
                         <li className="item">

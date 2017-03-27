@@ -34,7 +34,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 [class*='col-'] {
   float: left;
   min-height: 1px;
-  padding-right: 20px;
+  padding-right: 10px;
   /* column-space */ }
 
 [class*='col-'] [class*='col-']:last-child {
@@ -245,8 +245,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   margin: 0;
   position: relative;
-  background-color: #ffffff;
-  font-family: "Mosk Normal 400"; }
+  background-color: #f7f8fb;
+  font-family: "Mosk Normal 400";
+  padding-top: 60px; }
 
 *:focus {
   outline: none !important; }
@@ -260,27 +261,47 @@ body {
 
 .header {
   position: relative;
-  padding-top: 3px; }
+  padding-top: 5px; }
+  .header--top {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0; }
 
 .header:after {
   content: '';
   width: 100%;
   position: absolute;
-  top: 49px;
+  top: 52px;
   height: 3px;
   left: 0;
-  background: linear-gradient(to right, #8460AA, #8DCAE9); }
+  background: linear-gradient(to right, #8460AA, #8DCAE8); }
 
-.img, .movie__img {
+.img {
   width: 100%; }
 
-.icon, .icon--load {
+.icon, .icon--load, .icon--load--center {
   width: 50px; }
   .icon--load {
     display: inline-block;
-    background-color: red;
-    background: url(b2ec8744052dc7a63755d33b814a24ce.svg);
+    background: url(1a2706e2096061f29a9b9fa505187512.svg);
     height: 12.5px; }
+  .icon--load--center {
+    display: inline-block;
+    background: url(6dec1253a1d80e4851539773346b5111.svg);
+    height: 12.5px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.load {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  text-align: center; }
 
 .title {
   margin: 1em 0;
@@ -295,6 +316,9 @@ body {
 .clear--space {
   margin-top: 5px;
   margin-bottom: 5px; }
+
+.clear--p-l {
+  padding-left: 2px; }
 
 .button, .search__button, .account__button {
   background-color: #8460AA;
@@ -365,6 +389,7 @@ body {
     padding: 5px;
     width: 96%;
     margin: auto;
+    background-color: #ffffff;
     border: 1px solid #EEF1F6;
     -webkit-border-radius: 2px;
     -khtml-border-radius: 2px;
@@ -375,6 +400,12 @@ body {
   .search__button {
     width: 8%;
     padding: 1%; }
+
+@media screen and (max-width: 750px) {
+  .search__input {
+    width: 78%; }
+  .search__button {
+    width: 20%; } }
 
 .menu {
   position: absolute;
@@ -394,7 +425,7 @@ body {
   z-index: 2; }
 
 .account {
-  color: #aaaaaa;
+  color: #96A3B7;
   padding-top: 6px; }
   .account__link {
     font-size: .9em; }
@@ -406,6 +437,15 @@ body {
 .list {
   list-style: none; }
 
+.pc__title {
+  color: #8460AA;
+  font-size: 1.2em;
+  border-bottom: 1px solid #EEF1F6;
+  display: block;
+  text-align: left;
+  margin: 0;
+  padding: 0 5px 10px; }
+
 .item {
   list-style: none;
   text-align: center;
@@ -416,7 +456,7 @@ body {
     display: inline-block;
     width: 100%; }
   .item__link:hover {
-    background-color: #e7ebf3; }
+    background-color: #f7f8fb; }
 
 .figure {
   width: 100%; }
@@ -432,7 +472,31 @@ body {
     border-radius: 20px;
     border: 1px solid #EEF1F6;
     overflow: hidden;
-    background-color: #e7ebf3; }
+    background-color: #f7f8fb; }
+  .figure--user-pc {
+    margin: 5% auto;
+    width: 70%;
+    display: inline-block;
+    -webkit-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+    border: 1px solid #EEF1F6;
+    overflow: hidden;
+    background-color: #f7f8fb; }
+
+.user {
+  display: inline-block; }
+  .user__img {
+    border-radius: 100%;
+    border: 1px solid #96A3B7; }
+  .user__title {
+    font-family: "Mosk Semi-Bold 600";
+    font-size: .9em;
+    line-height: 1.2em;
+    color: #96A3B7; }
 
 .infos {
   width: 100%;
@@ -457,7 +521,7 @@ body {
   width: 94%;
   text-align: center;
   padding: 10px 3% 0;
-  color: #aaaaaa;
+  color: #96A3B7;
   font-family: "Mosk Semi-Bold 600"; }
 
 .toggle {
@@ -466,19 +530,9 @@ body {
   top: 0;
   float: right; }
 
-.item::nth-last-child {
-  border-bottom: 0; }
-
-.movies {
-  width: 20%;
-  float: right; }
-
-.movie, .play__movie {
-  width: 100%; }
-
-.play__movie {
-  height: 500px; }
-
-.play {
-  width: 70%;
-  float: left; }
+.box {
+  width: 96%;
+  padding: 2%;
+  background-color: #ffffff;
+  border: 1px solid #EEF1F6;
+  text-align: center; }

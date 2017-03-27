@@ -10,7 +10,7 @@
 [class*='col-'] {
 	float: left;
   	min-height: 1px;
-	padding-right: 20px; /* column-space */
+	padding-right: 10px; /* column-space */
 }
 
 [class*='col-'] [class*='col-']:last-child {

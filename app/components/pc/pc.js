@@ -26,9 +26,9 @@ class PC extends React.Component {
           src={this.props.show.image}
           alt="PC"
           onError={() => this.handleError()}/>
-        <div className="PC">         
+        <div className="PC">
           <h2 className="title">{this.props.name}</h2>
-      
+
           <div className="description">
             {this.props.description}
           </div>

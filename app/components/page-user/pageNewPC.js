@@ -20,3 +20,5 @@ class PageNewPC extends Component {
 }
 
 export default PageNewPC
+
+

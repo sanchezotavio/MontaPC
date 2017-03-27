@@ -11,13 +11,11 @@ class User extends Component {
   render() {
     return (
       <div className="user">
-        <div className="col-1-2">
-          <figure className="figure">
-            <img src={this.props.imageUser} className="user__img"/>
-          </figure>
-          <h1 className="title">{this.props.name}</h1>
-          <div className="date">Desde: {this.props.date}
-          </div>
+        <figure className="figure">
+          <img src={this.props.imageUser} className="user__img"/>
+        </figure>
+        <h1 className="title">{this.props.name}</h1>
+        <div className="date">Desde: {this.props.date}
         </div>
       </div>
     );

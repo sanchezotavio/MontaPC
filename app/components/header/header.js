@@ -12,7 +12,7 @@ class Header extends Component {
 
     render() {
         return (
-            <header className="header">
+            <header className="header header--top">
                 <div className="grid--header">
                     <div className="col-1-2 mobile-col-1-3 clear--space">
                         <h1 className="logo">

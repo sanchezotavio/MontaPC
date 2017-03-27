@@ -1,12 +1,22 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class IconLoading extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
-    return (
-      <div className="icon--load">
-      
-      </div>
-    )
+    if (this.props.type == "all") {
+      return (
+        <div className="load">
+          <div className="icon--load--center"></div>
+        </div>
+      )
+    } else {
+      return (
+        <div className="icon--load"></div>
+      )
+    }
+
   }
 }
 

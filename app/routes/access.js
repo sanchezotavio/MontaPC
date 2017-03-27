@@ -13,7 +13,7 @@ module.exports = (app, passport) => {
   app.get('/auth/facebook/callback',
     passport.authenticate('facebook', { session: true, failureRedirect: '/login' }),
     (req, res) => {
-      res.redirect('/')
+      res.redirect('/#/user/home')
     },
     (err, req, res, next) => {
       if (err) {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 import ReactDOM from 'react-dom'
 
@@ -6,7 +6,7 @@ import Request from 'react-http-request'
 
 import User from './user'
 
-import { Link } from 'react-router'
+import {Link} from 'react-router'
 
 import axios from 'axios'
 
@@ -29,7 +29,7 @@ class showUser extends Component {
             .get(`/user/main/${this.props.id}`)
             .then(response => {
                 const user = response.data[0]
-                this.setState({ name: user.name, image: user.imageUser, id: user._id, loading: false })
+                this.setState({name: user.name, image: user.imageUser, id: user._id, loading: false})
             })
             .catch((error) => {
                 console.log(error.response)
@@ -38,20 +38,16 @@ class showUser extends Component {
 
     render() {
         if (this.state.loading) {
-            return (
-                <IconLoading />
-            );
+            return (<IconLoading/>);
         } else {
             return (
                 <div className="user">
-                    <div className="col-1-2">
-                        <figure className="figure">
-                            <Link to={`/user/${this.state.id}`} className="link">
-                                <img src={this.state.image} className="user__img" />
-                            </Link>
-                        </figure>
-                        <h1 className="title">{this.state.name}</h1>
-                    </div>
+                    <figure className="figure figure--user-pc">
+                        <Link to={`/user/main/${this.state.id}`} className="link">
+                            <img src={this.state.image} className="img"/>
+                        </Link>
+                    </figure>
+                    <h1 className="title user__title">{this.state.name}</h1>
                 </div>
             );
         }
