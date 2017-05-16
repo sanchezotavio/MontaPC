@@ -3,15 +3,15 @@ var express = require('express')
 module.exports = function (app, passport) {
   var userController = app.controllers.user
 
-  app.get('/user', userController.main)
+  app.get('/api/user', userController.main)
 
-  app.get('/user/validate', userController.validate)
+  app.get('/api/user/validate', userController.validate)
 
-  app.get('/user/home', userController.loggedOn)
+  app.get('/api/user/home', userController.loggedOn)
 
-  app.get('/user/main/:id', userController.load)
+  app.get('/api/user/main/:id', userController.load)
 
-  app.get('/user/pcs', userController.loggedOn, userController.pcs)
+  app.get('/api/user/pcs', userController.loggedOn, userController.pcs)
 
-  app.post('/user/newpc', userController.loggedOn, userController.newPC)
+  app.post('/api/user/newpc', userController.loggedOn, userController.newPC)
 }

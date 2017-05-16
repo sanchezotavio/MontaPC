@@ -26,7 +26,7 @@ class showUser extends Component {
 
     componentDidMount() {
         axios
-            .get(`/user/main/${this.props.id}`)
+            .get(`api/user/main/${this.props.id}`)
             .then(response => {
                 const user = response.data[0]
                 this.setState({name: user.name, image: user.imageUser, id: user._id, loading: false})

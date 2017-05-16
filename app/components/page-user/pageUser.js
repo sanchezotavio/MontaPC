@@ -8,6 +8,8 @@ import {Link} from 'react-router'
 
 import MainUser from '../user/mainUser'
 
+
+
 class pageUser extends Component {
     render() {
         return (
@@ -21,6 +23,8 @@ class pageUser extends Component {
                     <div className="box">
                         <Link to="/user/newpc" className="button">Cadastrar Novo PC</Link>
                     </div>
+
+                    <div className="box"></div>
                 </div>
             </div>
         );

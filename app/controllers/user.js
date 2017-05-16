@@ -110,6 +110,8 @@ module.exports = (app) => {
     main: (req, res) => {
       if (req.user) {
         res.json({data: req.user});
+      } else {
+        res.json({data: null})
       }
     },
 

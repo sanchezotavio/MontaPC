@@ -1,5 +1,5 @@
 const stringSecurity = require('./stringSecurity')
-const domain = "http://montapc.heroku.com"
+const domain = "http://montapc.herokuapp.com"
 
 module.exports = {
   'facebookAuth': {

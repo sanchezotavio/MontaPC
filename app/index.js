@@ -11,8 +11,6 @@ import routes from './routes.js';
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 const store = createStoreWithMiddleware(reducers);
 
-
-
 ReactDOM.render(
   <Provider store={store}>
   <Router history={hashHistory} routes={routes}/>
