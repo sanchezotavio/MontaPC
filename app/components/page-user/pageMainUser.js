@@ -15,7 +15,7 @@ import ShowList from '../pc/showList'
 class pageMainUser extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props.params._id)
+       
         this.state = {
             id: this.props.params._id,
             loading: true,
@@ -35,6 +35,8 @@ class pageMainUser extends Component {
                 console.log(error)
             });
     }
+
+
 
     render() {
         if (this.state.loading) {
