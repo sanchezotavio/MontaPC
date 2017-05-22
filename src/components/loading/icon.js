@@ -8,7 +8,7 @@ class Loading extends Component {
     if (this.props.type == "all") {
       return (
         <div className="load">
-          <div className="icon--load--center"></div>
+          <div className="icon--load-center"></div>
         </div>
       )
     } else {

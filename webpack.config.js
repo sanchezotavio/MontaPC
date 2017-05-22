@@ -7,7 +7,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const config = {
   entry: {
-    bundle: './app/index.js',
+    bundle: './src/index.js',
     vendor: VENDOR_LIBS
   },
   output: {
@@ -20,7 +20,7 @@ const config = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       }, {
-        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+        test: /\.(eot|woff|woff2|svg|ttf|png)([\?]?.*)$/,
         loader: "file-loader"
       }, {
         test: /\.js?$/,
@@ -49,7 +49,7 @@ const config = {
       .CommonsChunkPlugin({
         name: ['vendor', 'manifest']
       }),
-    new HtmlWebPackPlugin({template: './app/index.html'}),
+    new HtmlWebPackPlugin({template: './src/index.html'}),
     new FaviconsWebpackPlugin('./styles/img/favicon/favicon-main.png'),
     new webpack.DefinePlugin({
       'process.env': {

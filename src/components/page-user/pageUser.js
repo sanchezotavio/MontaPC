@@ -52,7 +52,7 @@ class pageUser extends Component {
                             Meus PC's
                         </h1>
                         <div>
-                            <ShowList shows={this.state.shows} load={this.state.loading}/>
+                            <ShowList shows={this.state.shows} />
                         </div>
                     </div>
                 </div>
