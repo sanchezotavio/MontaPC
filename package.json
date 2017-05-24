@@ -10,13 +10,14 @@
     "build:dev": "set  NODE_ENV=development && npm run build",
     "build:production": "set  NODE_ENV=production && npm run build",
     "start": "node server"
-  
   },
   "author": "Otávio Sanchez",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "compression": "^1.6.2",
     "express": "^4.15.3",
+    "path": "^0.12.7",
     "react-http-request": "^1.0.3",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",

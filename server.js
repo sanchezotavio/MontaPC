@@ -6,12 +6,6 @@ var app = express()
 
 var helmet = require('helmet')
 
-var flash = require('connect-flash')
-
-var morgan = require('morgan')
-
-var cookieParser = require('cookie-parser')
-
 var path = require('path');
 
 var compression = require('compression');
@@ -23,8 +17,6 @@ app.use(compression());
 /* Application */
 
 app.use(helmet())
-
-app.use(morgan('dev'))
 
 app.use(cookieParser())
 
