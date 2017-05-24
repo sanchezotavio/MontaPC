@@ -23,7 +23,7 @@ class Header extends Component {
                     </div>
                     <div className="col-1-2 mobile-col-2-3 align-right clear--space">
                         <Request
-                            url='/api/user/validate'
+                            url={`${API_URL}/api/user/validate`}
                             method='get'
                             accept='application/json'
                             verbose={true}>

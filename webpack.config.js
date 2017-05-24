@@ -5,6 +5,15 @@ const VENDOR_LIBS = ['react', 'react-dom']
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
+var API_URL = {
+  production: JSON.stringify('http://apimontapc.herokuapp.com'),
+  development: JSON.stringify('http://localhost:5000')
+}
+
+var environment = process.env.NODE_ENV === 'development'
+  ? 'development' 
+  : 'production';
+
 const config = {
   entry: {
     bundle: './src/index.js',
@@ -65,17 +74,19 @@ const config = {
         output: {
           comments: false
         },
-        compressor: { // eslint-disable-line camelcase
+        compressor: {
           warnings: false,
           unused: true,
           dead_code: true
         },
         mangle: false
-      })
+      }),
+    new webpack.DefinePlugin({'API_URL': API_URL[environment]})
 
   ],
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    port: 8080
   }
 }
 

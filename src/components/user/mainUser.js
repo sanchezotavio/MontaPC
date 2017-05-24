@@ -11,7 +11,7 @@ import Loading from '../loading/icon'
 class mainUser extends Component {
     render() {
         return (
-            <Request url='/api/user' method='get' accept='application/json' verbose={true}>
+            <Request url={`${API_URL}/api/user`} method='get' accept='application/json' verbose={true}>
                 {({error, result, loading}) => {
                     if (loading) {
                         return <Loading />;

@@ -28,7 +28,7 @@ class pagePC extends Component {
 
     componentDidMount() {
         axios
-            .get(`/api/pc/${this.props.params._id}`)
+            .get(`${API_URL}/api/pc/${this.props.params._id}`)
             .then(response => {
                 const pc = response.data[0]
                 this.setState({
