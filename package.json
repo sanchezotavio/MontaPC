@@ -14,6 +14,7 @@
   "author": "Otávio Sanchez",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.15.3",
     "react-http-request": "^1.0.3",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
