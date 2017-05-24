@@ -7,9 +7,9 @@
     "build": "npm run clean && webpack -p && npm run start-app",
     "clean": "rimraf public",
     "start-app": "webpack-dev-server --progress --colors",
-    "start": "node server",
     "build:dev": "set  NODE_ENV=development && npm run build",
-    "build:production": "set  NODE_ENV=production && npm run build"
+    "build:production": "set  NODE_ENV=production && npm run build",
+    "start": "node server"
   },
   "author": "Otávio Sanchez",
   "license": "ISC",
