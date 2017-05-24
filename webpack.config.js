@@ -10,7 +10,7 @@ var API_URL = {
   development: JSON.stringify('http://localhost:5000')
 }
 
-var environment = process.env.NODE_ENV === 'development'
+var environment = process.env.NODE_ENV.trim() === 'development'
   ? 'development' 
   : 'production';
 

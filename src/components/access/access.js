@@ -10,9 +10,9 @@ class Access extends Component {
             <div className="grid">
                 <div className="box-login">
 
-                    <a className="button button--facebook " href="/auth/facebook">Acessar com o Facebook</a>
+                    <a className="button button--facebook" href={`${API_URL}/auth/facebook`}>Acessar com o Facebook</a>
 
-                    <a className="button button--google" href="/auth/google">Acessar com o Google</a>
+                    <a className="button button--google" href={`${API_URL}/auth/google`}>Acessar com o Google</a>
 
                 </div>
             </div>
