@@ -13,9 +13,8 @@ import PC from './components/page-pc/pagePC';
 import Access from './components/access/access'
 
 const requireLogin = (nextState, replace) => {
-
     axios
-        .get(`/api/user/validate`)
+        .get(`${API_URL}/api/validate`)
         .then((response) => {
             if (response.data.success == false) {
                window.location = "/#/login"
@@ -24,7 +23,6 @@ const requireLogin = (nextState, replace) => {
         .catch((error) => {
             window.location = "/"
         })
-
 };
 
 export default(
