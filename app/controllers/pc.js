@@ -13,6 +13,7 @@ module.exports = (app) => {
             res.json(pc)
           },
           (erro) => {
+            console.log(erro)
             res.status(404).json(erro)
           })
     }

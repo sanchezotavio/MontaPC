@@ -15,7 +15,7 @@ import Access from './components/access/access'
 const requireLogin = (nextState, replace) => {
 
     axios
-        .get(`/api/validate`)
+        .get(`/api/user/validate`)
         .then((response) => {
             if (response.data.success == false) {
                window.location = "/#/login"

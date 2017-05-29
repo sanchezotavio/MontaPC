@@ -1,4 +1,4 @@
-const development = "http://localhost:8080";
+const development = "http://localhost:5000";
 
 const production = "http://montapc.herokuapp.com";
 
@@ -10,7 +10,7 @@ var domain = {
         return production;
     },
     active: () => {
-        if (process.env.NODE_ENV === 'development') {
+        if (process.env.NODE_ENV.trim() === 'development') {
             return development;
         } else {
             return production;

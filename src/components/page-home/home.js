@@ -14,7 +14,7 @@ import axios from 'axios'
 class Home extends Component {
     constructor(props) {
         super(props);
-     
+
         this.state = {
             shows: [],
             selectedShow: null,
@@ -24,8 +24,7 @@ class Home extends Component {
     }
 
     search(term) {
-        console.log(API_URL)
-        axios.get(`${API_URL}/api/search/${term}`).then((response) => {   
+        axios.get(`/api/search/${term}`).then((response) => {   
             this.setState({
                 shows: response.data.pc,
                 selectedShow: response.data.pc[0],

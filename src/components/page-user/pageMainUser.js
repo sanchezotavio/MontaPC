@@ -26,7 +26,7 @@ class pageMainUser extends Component {
 
     componentDidMount() {
         axios
-            .get(`/api/search/${this.props.params._id}/user/pc`)
+            .get(`api/search/${this.props.params._id}/user/pc`)
             .then(response => {
                 this.setState({shows: response.data.pc, loading: false})
                 console.log(response.data)
