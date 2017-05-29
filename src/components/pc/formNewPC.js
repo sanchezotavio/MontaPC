@@ -35,7 +35,7 @@ class formNewPC extends Component {
 
   handleSubmit(event) {
     axios
-      .post(`${API_URL}/api/user/newpc`, this.state)
+      .post(`/api/user/newpc`, this.state)
       .then((response) => {
         const data = response.data.data[0];
         if (data.success === true) {

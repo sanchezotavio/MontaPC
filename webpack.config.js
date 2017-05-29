@@ -6,7 +6,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 var API_URL = {
-  production: JSON.stringify('http://apimontapc.herokuapp.com'),
+  production: JSON.stringify('http://montapc.herokuapp.com'),
   development: JSON.stringify('http://localhost:5000')
 }
 

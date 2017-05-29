@@ -25,7 +25,7 @@ class pageUser extends Component {
 
     componentDidMount() {
         axios
-            .get(`${API_URL}/api/user/pcs`)
+            .get(`/api/user/pcs`)
             .then(response => {
                 this.setState({shows: response.data, loading: false})
             })
