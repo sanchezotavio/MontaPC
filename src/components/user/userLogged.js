@@ -8,7 +8,7 @@ import User from './user'
 
 import Loading from '../loading/icon'
 
-class mainUser extends Component {
+class index extends Component {
     render() {
         return (
             <Request url='/api/user' method='get' accept='application/json' verbose={true}>
@@ -27,4 +27,4 @@ class mainUser extends Component {
     }
 }
 
-export default mainUser
+export default index

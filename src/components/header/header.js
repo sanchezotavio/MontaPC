@@ -38,11 +38,11 @@ class Header extends Component {
                                             alt={result.body.name}/>
                                     } else {
                                         return <div className="account">
-                                            <Link to="/login" className="account__link" activeClassName="button--active">
+                                            <Link to="/access" className="account__link" activeClassName="button--active">
                                                 Acessar
                                             </Link>
                                             <span className="account__span"> ou </span>
-                                            <Link to="/login" className="account__button" activeClassName="button--active">
+                                            <Link to="/access" className="account__button" activeClassName="button--active">
                                                 Cadastrar
                                             </Link>
                                         </div>

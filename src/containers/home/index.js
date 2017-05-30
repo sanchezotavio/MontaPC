@@ -4,14 +4,14 @@ import { connect } from 'react-redux'
 
 import { Link } from 'react-router'
 
-import SearchBar from '../search/searchBar'
+import SearchBar from '../../components/search/searchBar'
 
-import ShowList from '../pc/showList'
+import ShowList from '../../components/pc/showList'
 
 import axios from 'axios'
 
 
-class Home extends Component {
+class index extends Component {
     constructor(props) {
         super(props);
 
@@ -48,4 +48,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default index;

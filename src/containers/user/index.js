@@ -6,12 +6,12 @@ import Request from 'react-http-request'
 
 import {Link} from 'react-router'
 
-import MainUser from '../user/mainUser'
+import UserLogged from '../../components/user/userLogged'
 
-import ShowList from '../pc/showList'
+import ShowList from '../../components/pc/showList'
 
 import axios from 'axios'
-class pageUser extends Component {
+class index extends Component {
     constructor(props) {
         super(props);
     
@@ -39,7 +39,7 @@ class pageUser extends Component {
             <div className="grid">
                 <div className="col-3-12">
                     <div className="box">
-                        <MainUser/>
+                        <UserLogged/>
                     </div>
                 </div>
                 <div className="col-9-12">
@@ -61,4 +61,4 @@ class pageUser extends Component {
     }
 }
 
-export default pageUser
+export default index

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 
 import Request from 'react-http-request'
 
-import FormNewPC from '../pc/formNewPC'
+import FormNewPC from '../../components/pc/formNewPC'
 
 
 class PageNewPC extends Component {

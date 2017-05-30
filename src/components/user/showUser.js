@@ -12,7 +12,7 @@ import axios from 'axios'
 
 import Loading from '../loading/icon'
 
-class showUser extends Component {
+class index extends Component {
     constructor(props, context) {
         super(props);
         this.state = {
@@ -43,7 +43,7 @@ class showUser extends Component {
             return (
                 <div className="user">
                     <figure className="figure figure--user-pc">
-                        <Link to={`/user/main/${this.state.id}`} className="link">
+                        <Link to={`/user/page/${this.state.id}`} className="link">
                             <img src={this.state.image} className="img"/>
                         </Link>
                     </figure>
@@ -56,4 +56,4 @@ class showUser extends Component {
 
 }
 
-export default showUser
+export default index

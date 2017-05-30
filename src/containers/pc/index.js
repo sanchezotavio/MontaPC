@@ -4,39 +4,46 @@ import ReactDOM from 'react-dom'
 
 import axios from 'axios'
 
-import PC from '../pc/pc'
+import PC from '../../components/pc/pc'
 
-import ShowUser from '../user/showUser'
+import ShowUser from '../../components/user/showUser'
 
-import Loading from '../loading/icon'
+import Loading from '../../components/loading/icon'
 
-import ShowList from '../pc/showList'
-
-class pageMainUser extends Component {
+class index extends Component {
     constructor(props) {
         super(props);
-       
+
         this.state = {
-            id: this.props.params._id,
-            loading: true,
-            shows: []
+            components: [],
+            name: '',
+            date: '',
+            description: '',
+            image: '',
+            createdBy: '',
+            loading: true
         }
 
     }
 
     componentDidMount() {
         axios
-            .get(`api/search/${this.props.params._id}/user/pc`)
+            .get(`/api/pc/${this.props.params._id}`)
             .then(response => {
-                this.setState({shows: response.data.pc, loading: false})
-                console.log(response.data)
+                const pc = response.data[0]
+                this.setState({
+                    component: pc.component,
+                    name: pc.name,
+                    date: pc.date,
+                    image: pc.image,
+                    createdBy: pc.createdBy,
+                    loading: false
+                })
             })
             .catch((error) => {
-                console.log(error)
+                console.log(error.response)
             });
     }
-
-
 
     render() {
         if (this.state.loading) {
@@ -47,17 +54,17 @@ class pageMainUser extends Component {
                     <div className="grid">
                         <div className="col-2-12">
                             <div className="box">
-                                <ShowUser id={this.state.id}/>
+                                <ShowUser id={this.state.createdBy}/>
                             </div>
                         </div>
                         <div className="col-10-12">
                             <div className="box">
                                 <h1 className="title pc__title">
-                                    PC's criados
+                                    {this.state.name}
                                 </h1>
-                                <div>
-                                    <ShowList shows={this.state.shows}/>
-                                </div>
+                                <p>
+                                    {this.state.description}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -68,4 +75,4 @@ class pageMainUser extends Component {
     }
 }
 
-export default pageMainUser
+export default index
