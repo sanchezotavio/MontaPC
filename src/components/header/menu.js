@@ -12,6 +12,10 @@ class Menu extends Component {
         this.handleClick = this
             .handleClick
             .bind(this);
+
+        this.handleBlur = this
+            .handleBlur
+            .bind(this);
     }
 
     handleClick() {
@@ -20,6 +24,10 @@ class Menu extends Component {
         } else {
             this.setState({className: 'hidden'});
         }
+    }
+
+    handleBlur() {
+        this.setState({className: 'hidden'});
     }
 
     render() {
@@ -35,7 +43,10 @@ class Menu extends Component {
                     </Link>
                 </figure>
                 <div className="toggle">
-                    <button className="button--toggle" onClick={this.handleClick}></button>
+                    <button
+                        className="button--toggle"
+                        onClick={this.handleClick}
+                        onBlur={this.handleBlur}></button>
                 </div>
                 <nav className={`menu ${this.state.className}`}>
                     <div className="infos">
@@ -62,7 +73,10 @@ class Menu extends Component {
                             </Link>
                         </li>
                         <li className="item">
-                            <Link to="user/newpc" className="item__link" activeClassName="item__link--active">
+                            <Link
+                                to="user/newpc"
+                                className="item__link"
+                                activeClassName="item__link--active">
                                 Criar Novo PC
                             </Link>
                         </li>

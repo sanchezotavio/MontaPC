@@ -17,7 +17,6 @@ class index extends Component {
 
         this.state = {
             shows: [],
-            selectedShow: null,
             error: null
         }
         this.search = this.search.bind(this);
@@ -27,7 +26,6 @@ class index extends Component {
         axios.get(`/api/search/${term}`).then((response) => {   
             this.setState({
                 shows: response.data.pc,
-                selectedShow: response.data.pc[0],
                 error: null
             });
         }).catch((error) => {

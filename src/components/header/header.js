@@ -2,11 +2,11 @@ import React, {Component} from 'react'
 
 import {Link} from 'react-router'
 
-import Request from 'react-http-request'
-
 import Menu from './menu'
 
 import Loading from '../loading/icon'
+
+import HeaderUser from './headerUser'
 
 class Header extends Component {
 
@@ -22,34 +22,7 @@ class Header extends Component {
                         </h1>
                     </div>
                     <div className="col-1-2 mobile-col-2-3 align-right clear--space">
-                        <Request
-                            url='/api/user/validate'
-                            method='get'
-                            accept='application/json'
-                            verbose={true}>
-                            {({error, result, loading}) => {
-                                if (loading) {
-                                    return <Loading />;
-                                } else {
-                                    if (validateUser(JSON.stringify(result.body.success))) {
-                                        return <Menu
-                                            name={result.body.name}
-                                            image={result.body.imageUser}
-                                            alt={result.body.name}/>
-                                    } else {
-                                        return <div className="account">
-                                            <Link to="/access" className="account__link" activeClassName="button--active">
-                                                Acessar
-                                            </Link>
-                                            <span className="account__span"> ou </span>
-                                            <Link to="/access" className="account__button" activeClassName="button--active">
-                                                Cadastrar
-                                            </Link>
-                                        </div>
-                                    }
-                                }
-                            }}
-                        </Request>
+                        <HeaderUser />
                     </div>
                 </div>
             </header>
@@ -57,12 +30,5 @@ class Header extends Component {
     }
 }
 
-const validateUser = (success) => {
-    if (success == "true") {
-        return true;
-    } else {
-        return false;
-    }
-}
 
 export default Header;

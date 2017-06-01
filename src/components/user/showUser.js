@@ -21,7 +21,6 @@ class index extends Component {
             id: '',
             loading: true
         }
-        console.log(this.props.id)
     }
 
     componentDidMount() {

@@ -8,8 +8,9 @@ import {Router, hashHistory} from 'react-router';
 import '../styles/main.scss'
 import routes from './routes.js';
 
-import * as reducers from './store/reducers';
-const store = createStore(combineReducers(reducers), applyMiddleware(thunk));
+import configureStore from './store/configureStore';
+
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>

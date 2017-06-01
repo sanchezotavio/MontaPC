@@ -10,16 +10,16 @@ class formNewPC extends Component {
     super(props, context);
     this.state = {
       name: '',
-      description: ''
+      description: '',
+      images: [],
+      movies: [],
+      components: []
     };
 
     this.handleChange = this
       .handleChange
       .bind(this);
-    this.handleSubmit = this
-      .handleSubmit
-      .bind(this);
-
+   
     context.router
   }
 
@@ -61,22 +61,36 @@ class formNewPC extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Nome:
+        <div>
+          <label>
+            Nome:</label>
           <input
             name="name"
             type="text"
             value={this.state.name}
             onChange={this.handleChange}/>
-        </label>
-        <label>
-          Descrição:
+
+        </div>
+        <div>
+          <label>
+            Descrição:
+          </label>
           <input
             name="description"
             type="text"
             value={this.state.description}
             onChange={this.handleChange}/>
-        </label>
+        </div>
+        <div>
+          <label>
+            Imagens:
+          </label>
+          <input
+            name="description"
+            type="text"
+            value={this.state.description}
+            onChange={this.handleChange}/>
+        </div>
         <input type="submit" value="Submit"/>
       </form>
     );
