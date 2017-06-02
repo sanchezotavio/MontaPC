@@ -27,7 +27,9 @@ class Menu extends Component {
     }
 
     handleBlur() {
-        this.setState({className: 'hidden'});
+        setTimeout(() => {
+            this.setState({className: 'hidden'});
+        }, 100);
     }
 
     render() {

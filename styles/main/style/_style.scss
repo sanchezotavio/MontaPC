@@ -302,6 +302,8 @@ body {
 
   &__span {
     font-size: .9em;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   &__button {
@@ -422,7 +424,7 @@ body {
   width: 96%;
   padding: 2%;
   background-color: $bg;
-  border: 1px solid #EEF1F6;
+  border:$border;
   text-align: center;
 }
 
@@ -431,7 +433,12 @@ body {
   background-color: #ffffff;
   margin-top: 20px;
   padding: 20px;
-  border: 1px solid #EEF1F6;
+  border: $border;
   text-align: center;
   display: inline-block;
+}
+
+.box-input{
+  background-color: #ffffff;
+  border: $border;
 }

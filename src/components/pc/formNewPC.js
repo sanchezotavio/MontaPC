@@ -61,7 +61,7 @@ class formNewPC extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <div>
+        <div className="">
           <label>
             Nome:</label>
           <input
@@ -71,7 +71,7 @@ class formNewPC extends Component {
             onChange={this.handleChange}/>
 
         </div>
-        <div>
+        <div  className="">
           <label>
             Descrição:
           </label>
@@ -81,14 +81,14 @@ class formNewPC extends Component {
             value={this.state.description}
             onChange={this.handleChange}/>
         </div>
-        <div>
+        <div  className="">
           <label>
             Imagens:
           </label>
           <input
             name="description"
             type="text"
-            value={this.state.description}
+            value={this.state.image}
             onChange={this.handleChange}/>
         </div>
         <input type="submit" value="Submit"/>

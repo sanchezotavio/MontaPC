@@ -10,6 +10,8 @@ import UserLogged from '../../components/user/userLogged'
 
 import ShowList from '../../components/pc/showList'
 
+import Loading from '../../components/loading/icon'
+
 import axios from 'axios'
 class index extends Component {
     constructor(props) {
@@ -34,6 +36,15 @@ class index extends Component {
             })
     }
 
+    loading(){
+        if(this.state.loading){
+            return <Loading />
+        }
+        else{
+            return <ShowList shows={this.state.shows} />
+        }
+    }
+
     render() {
         return (
             <div className="grid">
@@ -52,7 +63,9 @@ class index extends Component {
                             Meus PC's
                         </h1>
                         <div>
-                            <ShowList shows={this.state.shows} />
+                        
+                        {this.loading()}
+                           
                         </div>
                     </div>
                 </div>

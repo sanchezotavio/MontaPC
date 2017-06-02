@@ -16,7 +16,7 @@ class HeaderUser extends Component {
             name: '',
             imageUser: '',
             validate: false,
-            loading: true
+            loading: 0
         }
         console.log(this.props.id)
     }
@@ -28,7 +28,9 @@ class HeaderUser extends Component {
                 const user = response.data
                 console.log(user)
                 if (user.success) {
-                    this.setState({name: user.name, imageUser: user.imageUser, validate: user.success, loading: false})
+                    this.setState({name: user.name, imageUser: user.imageUser, validate: user.success, loading: 1})
+                } else {
+                    this.setState({loading: 2})
                 }
             })
             .catch((error) => {
@@ -37,25 +39,36 @@ class HeaderUser extends Component {
     }
 
     render() {
-        if (this.state.validate) {
-            return <Menu
-                name={this.state.name}
-                image={this.state.imageUser}
-                alt={this.state.name}/>
 
-        } else {
-            return <div className="account">
-                <Link to="/access" className="account__link" activeClassName="button--active">
-                    Acessar
-                </Link>
-                <span className="account__span">
-                    ou
-                </span>
-                <Link to="/access" className="account__button" activeClassName="button--active">
-                    Cadastrar
-                </Link>
-            </div>
+        var component
+        var loading = this.state.loading
+        switch (loading) {
+            case 0:
+                component = <Loading/>
+                break;
+            case 1:
+                component = <Menu
+                    name={this.state.name}
+                    image={this.state.imageUser}
+                    alt={this.state.name}/>
+                break;       
+            default:
+                component = <div className="account">
+                    <Link to="/access" className="account__link" activeClassName="button--active">
+                         Acessar
+                    </Link>
+                    <span className="account__span">
+                        ou
+                    </span>
+                    <Link to="/access" className="account__button" activeClassName="button--active">
+                         Cadastrar
+                    </Link>
+                </div>
+                break;
         }
+
+        return component
+
     }
 
 }

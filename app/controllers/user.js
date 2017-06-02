@@ -37,7 +37,7 @@ module.exports = (app) => {
       if (req.user) {
         next()
       } else {
-        res.redirect('/login')
+        res.redirect('/access')
       }
     },
 

@@ -20,7 +20,7 @@ const requireLogin = (nextState, replace) => {
         .get(`/api/user/validate`)
         .then((response) => {
             if (response.data.success == false) {
-               window.location = "/#/access"
+               window.location = "/logout"
             }
         })
         .catch((error) => {
